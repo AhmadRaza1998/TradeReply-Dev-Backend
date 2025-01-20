@@ -23,7 +23,7 @@ Ensure dev styling matches the deprecated frontend-only site, https://static.tra
 - **Database**: MySQL for relational data management.
 - **Build Tools**: Vite serves as the primary build tool, replacing Laravel Mix, with scripts for development (`npm run dev`), production builds (`npm run build`), and formatting (`npm run format`) powered by Prettier. ESLint ensures consistent code quality.
 - **UI Libraries**: Bootstrap and React-Bootstrap for prebuilt components, with additional enhancements from React-Select, React-Datepicker, and React-Slick for advanced UI functionality.
-- **Hosting**: AWS (EC2 for compute, RDS for database, S3 for storage).
+- **Hosting**: AWS (EC2 T3 small (64-bit x86) using Apache Web Server on Ubuntu Server for compute, RDS for database, S3 for storage).
 - **Validation**: Yup for schema-based form validation, often paired with React forms for robust input handling.
 - **HTTP Requests**: Axios is used for API interactions, simplifying HTTP request management and error handling.
 
