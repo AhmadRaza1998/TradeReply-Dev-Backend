@@ -1,0 +1,107 @@
+@use "../theme/var";
+
+.commonSearch {
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  &.searchBtn {
+    .form-control {
+      padding: 0.5rem 1rem;
+      background-color: var.$white;
+      color: var.$black;
+      border: 0;
+      border-top-left-radius: 10rem;
+      border-bottom-left-radius: 10rem;
+      min-height: 50px;
+      width: calc(100% - 54px);
+      min-width: auto;
+      font-weight: 600;
+
+      &::placeholder {
+        color: var.$textclr;
+        opacity: 1;
+      }
+
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+        background-color: var.$white;
+        color: var.$black;
+      }
+    }
+  }
+
+  .form-control {
+    padding: 0.5rem 1rem;
+    padding-left: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var.$white;
+    border: 0;
+    border-radius: 15px;
+    min-height: 70px;
+    width: auto;
+    width: 400px;
+    font-size: 1.25rem;
+
+    @media (max-width: 991px) {
+      font-size: 16px;
+      min-height: 56px;
+      padding-left: 40px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 0.875rem;
+    }
+
+    &:hover {
+      appearance: none;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.8);
+      opacity: 1;
+    }
+
+    &:disabled {
+      background-color: transparent;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: var.$white;
+      border: 0;
+    }
+  }
+
+  .onlyIcon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    @media (max-width: 991px) {
+      left: 15px;
+    }
+  }
+
+  .btnIcon {
+    cursor: pointer;
+    width: 54px;
+    min-height: 50px;
+    background-color: var.$baseclr;
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+      background-color: var.$yellow;
+    }
+  }
+}

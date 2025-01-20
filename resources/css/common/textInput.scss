@@ -1,0 +1,229 @@
+@use "../theme/var";
+
+.form-label,
+.form-check-label {
+  display: block;
+  color: var.$greytext;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0.625rem;
+
+  @media (max-width: 1199px) {
+    font-size: 0.875rem;
+  }
+}
+
+.customInput {
+  margin-bottom: 1.25rem;
+  line-height: normal;
+
+  @media (max-width: 767px) {
+    margin-bottom: 1rem;
+  }
+
+  &_inner {
+    position: relative;
+
+    .allocP {
+      position: absolute;
+      top: 13px;
+      right: 1rem;
+      color: var.$greytext;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  label {
+    display: block;
+    color: var.$greytext;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0.625rem;
+
+    @media (max-width: 1199px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  .form-control {
+    min-height: 56px;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    padding: 0.5rem 1.25rem;
+    border-radius: 1rem;
+    border: 1px solid var.$inputbgclr;
+    background-color: var.$inputbgclr;
+    color: var.$white;
+    font-size: 1rem;
+
+    @media (max-width: 1599px) {
+      min-height: 52px;
+      font-size: 1rem;
+    }
+
+    &.is-invalid,
+    &.was-validated,
+    &:invalid {
+      background-image: none;
+      border-color: var.$red;
+    }
+
+    &:hover {
+      appearance: none;
+    }
+
+    &::placeholder {
+      color: var.$white;
+      opacity: 0.7;
+    }
+
+    &:disabled {
+      background-color: transparent;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border: 1px solid var.$inputbgclr;
+      background-color: var.$inputbgclr;
+      color: var.$white;
+    }
+
+    &.passwordInput {
+      padding-right: 4.375rem;
+    }
+  }
+
+  &.passwordInput {
+    .form-control {
+      padding-right: 3.75rem;
+    }
+  }
+
+  .eyeIcon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+
+      path {
+        fill: var.$white;
+      }
+    }
+  }
+}
+
+.checkbox_input {
+  .form-check {
+    margin-bottom: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    .form-check-input {
+      float: unset;
+      margin: 0;
+      box-shadow: none;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid var.$borderclr;
+
+      &:checked {
+        border-color: var.$baseclr;
+      }
+
+      &:checked[type="radio"] {
+        background-size: 10px;
+      }
+    }
+
+    .form-check-label {
+      line-height: 1;
+      margin-left: 10px;
+    }
+
+    &.form-switch {
+      .form-check-input {
+        width: 72px;
+        height: 34px;
+        background-color: var.$white;
+        border-color: var.$borderclr;
+        background-size: 30px;
+
+        &:checked {
+          background-color: var.$baseclr;
+          border-color: var.$baseclr;
+          // background-image: url("../../../Assets/Images/Icons/text$textclrdot.svg");
+        }
+      }
+    }
+  }
+}
+
+.error-message {
+  color: var.$red;
+  font-size: 0.875rem;
+  line-height: normal;
+  display: block;
+  padding-top: 5px;
+  font-weight: 400;
+}
+
+.form-control {
+  min-height: 56px;
+  box-shadow: none;
+  outline: none;
+  width: 100%;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid var.$inputbgclr;
+  background-color: var.$inputbgclr;
+  color: var.$black;
+  font-size: 1rem;
+
+  @media (max-width: 1599px) {
+    min-height: 52px;
+    font-size: 1rem;
+  }
+
+  &.is-invalid,
+  &.was-validated,
+  &:invalid {
+    background-image: none;
+    border-color: var.$red;
+  }
+
+  &:hover {
+    appearance: none;
+  }
+
+  &::placeholder {
+    color: var.$white;
+  }
+
+  &:disabled {
+    background-color: transparent;
+  }
+
+  &:focus {
+    box-shadow: none;
+    border: 1px solid var.$inputbgclr;
+    background-color: var.$inputbgclr;
+    color: var.$white;
+  }
+
+  &.passwordInput {
+    padding-right: 4.375rem;
+  }
+}

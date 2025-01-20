@@ -1,0 +1,57 @@
+@use "../theme/var";
+
+.trade_brand {
+  .container {
+    max-width: 1130px;
+  }
+
+  .divider {
+    margin: 3.1rem 0;
+
+    @media (max-width: 767px) {
+      margin: 1.5rem 0;
+    }
+  }
+
+  &_content {
+    &_list {
+      padding-left: 1.875rem;
+      padding-top: 0.625rem;
+
+      @media (max-width: 767px) {
+        padding-left: 0;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        color: var.$white;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+        letter-spacing: -0.10000000149011612px;
+        margin-bottom: 1.875rem;
+        gap: 20px;
+
+        @media (max-width: 767px) {
+          font-size: 15px;
+          line-height: 23px;
+          margin-bottom: 1rem;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        svg {
+          width: 36px;
+          height: 38px;
+        }
+      }
+    }
+
+    &_logo {
+      text-align: center;
+    }
+  }
+}

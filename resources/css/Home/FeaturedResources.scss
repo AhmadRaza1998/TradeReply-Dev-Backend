@@ -1,0 +1,31 @@
+.featured_resources {
+  background-color: $clr031940;
+
+  &_heading {
+    margin-bottom: 70px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  &_content {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+
+    p {
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 34px;
+      margin: 1.5rem 0 2rem;
+      color: $white;
+
+      @media screen and (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}

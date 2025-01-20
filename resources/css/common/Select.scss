@@ -1,0 +1,135 @@
+@use "../theme/var";
+
+.common_select {
+  margin-bottom: 1.25rem;
+
+  .select__control {
+    border: none;
+    font-size: 1.25rem;
+    min-height: 56px;
+    border-radius: 0.8rem;
+    transition: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    padding: 0.625rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid var.$borderclr;
+
+    @media (max-width: 1599px) {
+      min-height: 52px;
+      font-size: 1rem;
+      padding: 0.625rem 1rem;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: var.$borderclr;
+    }
+
+    .select__input-container {
+      color: var.$white;
+    }
+
+    .select__input {
+      opacity: 0 !important;
+    }
+
+    .select__placeholder {
+      color: var.$white;
+    }
+
+    .select__value-container {
+      padding-inline: 0;
+
+      .select__multi-value {
+        background-color: var.$baseclr;
+        color: var.$white;
+
+        .select__multi-value__label {
+          color: var.$white;
+        }
+      }
+    }
+
+    .select__value-container--is-multi {
+      flex-wrap: unset;
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      .select__multi-value {
+        min-width: max-content;
+      }
+    }
+
+    .select__single-value {
+      color: var.$white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .select__indicator-separator {
+      display: none;
+    }
+
+    .select__indicator {
+      cursor: pointer;
+      padding: 0;
+
+      svg {
+        fill: var.$white;
+        width: 24px;
+        height: 24px;
+        transition: all ease-in-out 0.3s;
+      }
+    }
+  }
+
+  .select__menu {
+    width: 100%;
+    right: 0;
+    left: unset;
+    background-color: var.$black;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    .select__menu-notice {
+      font-size: 14px;
+    }
+
+    .select__menu-list {
+      .select__option {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        color: var.$white;
+
+        &:hover {
+          background-color: transparent;
+          color: var.$baseclr !important;
+        }
+
+        &.select__option--is-focused {
+          background-color: transparent;
+          color: var.$white;
+        }
+
+        &.select__option--is-selected {
+          background-color: transparent;
+          color: var.$baseclr !important;
+        }
+      }
+    }
+  }
+
+  .select__control--menu-is-open {
+    .select__indicator {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}

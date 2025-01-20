@@ -1,0 +1,68 @@
+@use "../theme/var";
+
+.features {
+  &_inner {
+    img {
+      @media (min-width: 992px) {
+        max-width: 85%;
+      }
+    }
+  }
+  &_stock {
+    h1 {
+      font-size: 80px;
+      font-weight: 800;
+      line-height: 90px;
+
+      @media (max-width: 1199px) {
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+  }
+  &_heading {
+    h4 {
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 36px;
+      font-size: 24px;
+
+      @media (max-width: 991px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 18px;
+      }
+    }
+  }
+  &_yourTrade {
+    .answer_trades {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  &_transformsec {
+    ul {
+      margin-top: 30px;
+
+      li {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+        margin: 20px 0;
+        color: var.$white;
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

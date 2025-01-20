@@ -1,0 +1,116 @@
+@use "../theme/var";
+
+.blog_detail {
+  &_tag {
+    padding: 6px 20px;
+    background-color: var.$baseclr;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: -0.10000000149011612px;
+    text-transform: uppercase;
+    color: var.$white;
+    border: 0;
+  }
+
+  &_heading {
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: var.$white;
+      padding: 30px 0;
+
+      @media (max-width: 1199px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 1.5rem;
+        line-height: 35px;
+      }
+    }
+
+    h5 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var.$white;
+      padding-top: 30px;
+
+      @media (max-width: 767px) {
+        font-size: 1.125rem;
+        line-height: 30px;
+        padding-top: 5px;
+      }
+    }
+  }
+
+  &_postimg {
+    padding: 5rem 0;
+
+    @media (max-width: 767px) {
+      padding: 2rem 0;
+    }
+
+    img {
+      border-radius: 60px;
+
+      @media (max-width: 767px) {
+        border-radius: 30px;
+      }
+    }
+  }
+
+  &_text {
+    p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: -0.10000000149011612px;
+      color: var.$white;
+      padding-top: 20px;
+
+      @media (max-width: 767px) {
+        font-size: 1rem;
+        line-height: 24px;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &_author {
+    padding-top: 5rem;
+
+    @media (max-width: 767px) {
+      padding-top: 3rem;
+    }
+
+    &_btn {
+      background-color: transparent;
+      border: 0;
+      color: var.$baseclr;
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 24.5px;
+      letter-spacing: -0.10000000149011612px;
+      margin-bottom: 60px;
+
+      @media (max-width: 767px) {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .recent_post {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 0;
+    padding: 30px 0;
+    border-top: 1px solid var.$borderclr;
+    border-bottom: 1px solid var.$borderclr;
+  }
+}

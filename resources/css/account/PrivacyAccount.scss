@@ -1,0 +1,17 @@
+@use "../theme/var";
+
+.step_verification {
+  &_content {
+    padding-right: 1rem;
+
+    @media (max-width: 767px) {
+      padding-right: 0;
+
+      p {
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

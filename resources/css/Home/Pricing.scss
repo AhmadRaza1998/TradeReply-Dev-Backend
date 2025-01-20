@@ -1,0 +1,260 @@
+@use "../theme/var";
+
+.pricing {
+  position: relative;
+
+  &_banner {
+    padding: 100px 0 42px;
+
+    @media (max-width: 767px) {
+      padding: 50px 0 42px;
+    }
+
+    &_content {
+      h1 {
+        font-size: 80px;
+        font-weight: 800;
+        line-height: 90px;
+
+        @media screen and (max-width: 1199px) {
+          font-size: 60px;
+          line-height: 65px;
+        }
+
+        @media screen and (max-width: 991px) {
+          font-size: 48px;
+          line-height: 52.8px;
+          font-weight: 800;
+        }
+
+        @media screen and (max-width: 767px) {
+          text-align: center;
+        }
+      }
+      p {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36px;
+        letter-spacing: -1px;
+        text-align: left;
+        padding-top: 2rem;
+
+        @media screen and (max-width: 991px) {
+          font-size: 18px;
+          line-height: 27px;
+        }
+
+        @media screen and (max-width: 767px) {
+          text-align: center;
+          margin-bottom: 20px;
+          padding-top: 1.25rem;
+        }
+      }
+    }
+
+    &_forever {
+      background: linear-gradient(
+          139.01deg,
+          #26334d 18.26%,
+          #4e5d7a 63.25%,
+          #26334d 100.07%
+        ),
+        radial-gradient(
+          27.58% 27.58% at 50% 50%,
+          rgb(254, 165, 1) 0%,
+          rgb(254, 165, 1) 100%
+        );
+      border-radius: 40px;
+      padding: 50px 20px;
+      text-align: center;
+      position: relative;
+      margin: auto;
+      max-width: 22em;
+      box-sizing: border-box;
+      background-clip: padding-box;
+      /* !importanté */
+      border: solid 2px transparent;
+      /* !importanté */
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -2px;
+        /* !importanté */
+        border-radius: inherit;
+        /* !importanté */
+        background: linear-gradient(
+          142.34deg,
+          #00adef 0.06%,
+          rgba(254, 165, 0, 0) 46.5%,
+          #00adef 98.85%
+        );
+      }
+
+      @media (max-width: 991px) {
+        h4 {
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        padding: 30px 20px;
+      }
+    }
+  }
+
+  &_table {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/images/trade_grndbg.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      border-radius: 2rem;
+      z-index: -1;
+    }
+
+    &_switch {
+      margin-bottom: 25px;
+
+      p {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 36px;
+        text-align: left;
+      }
+
+      .checkbox_input {
+        margin: 0 20px;
+      }
+    }
+
+    &_col {
+      &:first-child {
+        .pricing_table_box {
+          border-right: 0;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+        }
+      }
+
+      &:last-child {
+        .pricing_table_box {
+          border-left: 0;
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+        }
+      }
+    }
+
+    &_box {
+      background: #00000033;
+      border: 3px solid #ffffff1a;
+      padding: 50px 20px;
+
+      @media (min-width: 1400px) {
+        padding: 50px 30px;
+      }
+
+      @media (max-width: 991px) {
+        border: 3px solid #ffffff1a !important;
+        border-radius: 30px;
+        margin-top: 30px;
+      }
+
+      @media (max-width: 767px) {
+        padding: 30px 20px;
+      }
+
+      &_heading {
+        text-align: center;
+
+        h2 {
+          font-size: 48px;
+          font-weight: 800;
+          text-align: center;
+          margin: 20px 0;
+
+          @media screen and (max-width: 991px) {
+            font-size: 36px;
+          }
+
+          @media screen and (max-width: 767px) {
+            font-size: 28px;
+          }
+
+          span {
+            font-size: 24px;
+
+            @media screen and (max-width: 991px) {
+              font-size: 18px;
+            }
+
+            @media screen and (max-width: 767px) {
+              font-size: 16px;
+            }
+          }
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 27px;
+          text-align: center;
+          margin: 20px 0;
+
+          a {
+            &:hover {
+              color: var.$green;
+            }
+          }
+        }
+
+        .green-btn {
+          @media screen and (max-width: 991px) {
+            width: 100%;
+          }
+        }
+      }
+
+      ul {
+        margin-top: 30px;
+
+        @media (min-width: 768px) and (max-width: 991px) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        li {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 27px;
+          margin: 20px 0;
+          color: var.$white;
+
+          @media (min-width: 768px) and (max-width: 991px) {
+            width: 50%;
+          }
+
+          svg {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

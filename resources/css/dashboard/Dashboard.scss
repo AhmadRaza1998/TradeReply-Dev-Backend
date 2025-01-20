@@ -1,0 +1,122 @@
+@use "../theme/var";
+
+.dashboard {
+  .trade_head {
+    position: relative;
+  }
+
+  &_card {
+    .overview_box {
+      padding: 0;
+      border-radius: 1.25rem;
+      background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(0, 185, 255, 0.2) 21.5%,
+          rgba(0, 83, 153, 0.2) 100%
+        ),
+        linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.05) 47.5%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      border: 1px solid var.$lightwhiteclr;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 50px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all ease-in-out 0.3s;
+
+      @media (max-width: 1280px) {
+        min-height: 316px;
+      }
+
+      @media (max-width: 1199px) {
+        min-height: 300px;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 991px) {
+        min-height: 206px;
+      }
+
+      @media (max-width: 767px) {
+        min-height: 230px;
+      }
+
+      &.darkbox {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(0, 185, 255, 0.1) 21.5%,
+            rgba(0, 83, 153, 0.1) 100%
+          );
+      }
+
+      &:hover {
+        background: radial-gradient(
+            50% 50% at 50% 50%,
+            #00b9ff66 21.5%,
+            #00539966
+          ),
+          linear-gradient(135deg, #fff0, #ffffff20 47.5%, #fff0);
+
+        &.darkbox {
+          background: linear-gradient(0deg, #0009, #0009),
+            radial-gradient(50% 50% at 50% 50%, #00b9ff33 21.5%, #00539933);
+        }
+      }
+
+      &_icon {
+        border: 0;
+        background-color: var.$baseclr;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10rem;
+      }
+
+      h4 {
+        @media screen and (max-width: 991px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.setting_btn {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  right: 0;
+
+  svg {
+    path {
+      fill: var.$white;
+    }
+
+    @media (max-width: 1199px) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: var.$clre6e6e6;
+      }
+    }
+  }
+}

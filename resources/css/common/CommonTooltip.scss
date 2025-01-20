@@ -1,0 +1,68 @@
+@use "../theme/var";
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-box {
+  position: absolute;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  min-width: 300px;
+  width: 300px;
+  background-color: hwb(210 1% 65% / 0.699);
+  color: var.$white;
+  text-align: left;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 20px;
+  backdrop-filter: blur(6px);
+
+  @media screen and (max-width: 991px) {
+    font-size: 12px;
+    line-height: 18px;
+    min-width: 200px;
+    width: 200px;
+  }
+}
+
+.tooltip-top-left {
+  top: 0;
+  right: 0;
+  transform: translateY(-100%);
+}
+
+.tooltip-top-right {
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+}
+
+.tooltip-bottom-left {
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
+}
+
+.tooltip-bottom-right {
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+}
+
+.tooltip-center-bottom {
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-center-top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+}

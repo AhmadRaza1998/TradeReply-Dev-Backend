@@ -1,0 +1,90 @@
+@use "../theme/var";
+
+.customPagination {
+  .pagination {
+    .page-item {
+      .page-link {
+        background-color: transparent;
+        border: 0;
+        color: var.$baseclr;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.25rem;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      &:last-child,
+      &:first-child {
+        .page-link {
+          border: 0;
+          background-color: var.$baseclr;
+          border-radius: 10rem;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            display: flex;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-left: 1rem;
+      }
+
+      &:first-child {
+        margin-right: 1rem;
+      }
+
+      &.active {
+        .page-link {
+          text-decoration: underline;
+        }
+      }
+
+      &:hover {
+        .page-link {
+          color: var.$baseclrhover;
+          text-decoration: underline;
+        }
+
+        &:last-child,
+        &:first-child {
+          .page-link {
+            background-color: var.$baseclrhover;
+          }
+        }
+      }
+
+      &.disabled,
+      &:disabled {
+        border-radius: 10rem;
+        background-color: #414c60;
+        pointer-events: none;
+
+        .page-link {
+          background-color: #414c60;
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .prevArrow {
+      transform: rotate(-180deg);
+    }
+  }
+}

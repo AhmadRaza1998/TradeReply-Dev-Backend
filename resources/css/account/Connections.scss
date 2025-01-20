@@ -1,0 +1,33 @@
+@use "../theme/var";
+
+.connections_sec {
+  .table {
+    &_heading {
+      border: 1px solid var.$borderclr;
+      border-radius: 15px;
+      padding: 10px 1.25rem;
+    }
+  }
+
+  .commonSearch {
+    .form-control {
+      min-height: 40px;
+      font-size: 1rem;
+      border: 0;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+        opacity: 1;
+      }
+    }
+  }
+}

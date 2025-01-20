@@ -1,0 +1,23 @@
+@use "../theme/var";
+
+.admin_layout {
+  .common_heading {
+    h2 {
+      font-size: 3.125rem;
+      line-height: normal;
+      color: var.$white;
+
+      @media (max-width: 1399px) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: 1269px) {
+        font-size: 28px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 25px;
+      }
+    }
+  }
+}

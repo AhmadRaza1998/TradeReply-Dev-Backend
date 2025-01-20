@@ -1,0 +1,89 @@
+@use "../theme/var";
+
+.site_footer {
+  background-color: var.$black;
+
+  &_inner {
+    padding: 70px 0;
+
+    @media screen and (max-width: 991px) {
+      padding: 40px 0;
+    }
+  }
+
+  &_logo {
+    img {
+      width: 200px;
+    }
+  }
+
+  &_content {
+    p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 26px;
+      letter-spacing: -0.10000000149011612px;
+      margin-top: 20px;
+
+      @media screen and (max-width: 991px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &_links {
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+    }
+
+    h4 {
+      color: var.$clrc5c5d5;
+      margin-bottom: 1.25rem;
+
+      @media screen and (max-width: 991px) {
+        font-size: 18px;
+      }
+    }
+
+    ul {
+      li {
+        a {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24.5px;
+          letter-spacing: -0.10000000149011612px;
+          color: var.$white;
+          transition: all ease-in-out 0.3s;
+          padding-bottom: 10px;
+
+          @media screen and (max-width: 991px) {
+            font-size: 16px;
+          }
+
+          &:hover,
+          &.active {
+            color: var.$baseclr;
+          }
+        }
+      }
+    }
+  }
+
+  &_copyright {
+    padding: 1.25rem 0;
+    border-top: 1px solid var.$white;
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 26px;
+      letter-spacing: -0.10000000149011612px;
+
+      @media screen and (max-width: 991px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

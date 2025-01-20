@@ -1,0 +1,23 @@
+@use "../theme/var";
+
+.payment_methods {
+  .account_card_list {
+    ul {
+      li {
+        justify-content: flex-start;
+
+        span {
+          padding-right: 15px;
+
+          @media screen and (min-width: 768px) {
+            width: 200px;
+          }
+        }
+      }
+    }
+
+    p {
+      color: var.$textclr;
+    }
+  }
+}

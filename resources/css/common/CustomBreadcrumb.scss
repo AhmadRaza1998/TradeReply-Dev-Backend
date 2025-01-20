@@ -1,0 +1,23 @@
+@use "../theme/var";
+
+.custom_breadcrumb {
+  .breadcrumb {
+    li {
+      a {
+        color: var.$clrc5c5d5;
+
+        &:hover {
+          color: var.$baseclr;
+        }
+      }
+
+      &.active {
+        color: var.$white;
+      }
+
+      &::before {
+        color: var.$white;
+      }
+    }
+  }
+}

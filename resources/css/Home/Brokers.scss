@@ -1,0 +1,157 @@
+@use "../theme/var";
+
+.brokers {
+  position: relative;
+
+  &_content {
+    p {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: -0.1px;
+      margin: 30px 0;
+
+      @media screen and (max-width: 991px) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 15px;
+        line-height: 23px;
+      }
+
+      a {
+        &:hover {
+          color: var.$yellow;
+        }
+      }
+    }
+
+    h6 {
+      padding-top: 1.875rem;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: -0.1px;
+    }
+
+    .submit_request {
+      // font-size: 15px;
+      color: var.$baseclr;
+      font-weight: 700;
+
+      svg {
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        color: var.$yellow;
+
+        svg {
+          margin-left: 5px;
+
+          path {
+            fill: var.$yellow;
+          }
+        }
+      }
+    }
+  }
+
+  &_tablesec {
+    padding: 100px 0;
+
+    @media screen and (max-width: 991px) {
+      padding: 50px 0;
+    }
+
+    &_inner {
+      h6 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: -0.10000000149011612px;
+        color: var.$yellow;
+        text-align: right;
+        margin-bottom: 15px;
+
+        @media screen and (max-width: 991px) {
+          text-align: left;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 15px;
+          line-height: 23px;
+        }
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .tableless {
+    .table-responsive {
+      max-height: 400px;
+      clip-path: inset(0 round 2rem);
+
+      @media screen and (max-width: 767px) {
+        max-height: 50vh;
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 1rem;
+
+        @media screen and (max-width: 767px) {
+          width: 6px;
+        }
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var.$baseclr;
+        border-radius: 1rem;
+      }
+    }
+
+    .common_table {
+      thead {
+        tr {
+          th {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 11;
+          }
+        }
+      }
+
+      tbody {
+        height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #888;
+          border-radius: 10px;
+        }
+
+        /* Thumb color when hovered */
+        &::-webkit-scrollbar-thumb:hover {
+          background-color: #555;
+        }
+      }
+    }
+  }
+}

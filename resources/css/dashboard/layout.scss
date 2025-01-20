@@ -1,0 +1,265 @@
+@use "../theme/var";
+
+.admin_layout {
+  display: flex;
+  flex-wrap: wrap;
+
+  &_sidebar {
+    background-color: var.$clr031940;
+    padding-bottom: 1rem;
+
+    @media (max-width: 767px) {
+      padding-bottom: 0;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    .admin_sidebar {
+      width: 280px;
+      background-color: var.$clr031940;
+      box-shadow: 5px 0px 10px 0px #00000026;
+      height: calc(100vh - 88px);
+      position: sticky;
+      top: 88px;
+      padding: 1.25rem 1rem;
+      overflow-y: auto;
+
+      @media (max-width: 1279px) {
+        width: 250px;
+        padding: 10px 10px;
+      }
+
+      @media (max-width: 991px) {
+        width: 80px;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+        position: relative;
+        top: auto;
+        height: auto;
+        padding: 0 50px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+
+        &_wrapper {
+          display: flex;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          padding: 10px 0;
+          gap: 10px;
+          max-width: 260px;
+          width: 100%;
+
+          .linkList {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &_content {
+    padding: 30px 30px 5rem;
+    width: calc(100% - 280px);
+    background: linear-gradient(180deg, #073992 -15.02%, #0557a3 54.89%);
+
+    @media screen and (max-width: 1279px) {
+      padding: 20px 0 1.25rem;
+      width: calc(100% - 250px);
+
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      width: calc(100% - 80px);
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    .py-40 {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    .pb-60 {
+      padding-bottom: 24px;
+    }
+
+    .pt-40 {
+      padding-top: 24px;
+    }
+  }
+}
+
+.trade_manager {
+  &_btns {
+    .btn-style {
+      min-height: 70px;
+      text-transform: uppercase;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 34.66px;
+      letter-spacing: -1px;
+
+      @media (max-width: 1199px) {
+        min-height: 60px;
+        font-size: 20px;
+      }
+
+      @media (max-width: 767px) {
+        min-height: 50px;
+      }
+
+      @media (max-width: 575px) {
+        width: 100% !important;
+      }
+
+      svg {
+        transition: all ease-in-out 0.3s;
+        width: 28px;
+
+        @media screen and (max-width: 1199px) {
+          width: 21px;
+        }
+      }
+    }
+  }
+
+  &_entrylist {
+    &_box {
+      border: 2px solid var.$baseclr;
+      border-radius: 0.625rem;
+      padding: 1.25rem;
+      margin-top: 1.25rem;
+      display: flex;
+      background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(0, 185, 255, 0.2) 21.5%,
+          rgba(0, 83, 153, 0.2) 100%
+        ),
+        linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.05) 47.5%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: radial-gradient(
+            50% 50% at 50% 50%,
+            #00b9ff66 21.5%,
+            #00539966
+          ),
+          linear-gradient(135deg, #fff0, #ffffff20 47.5%, #fff0);
+      }
+
+      h5 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        min-width: 300px;
+
+        @media (max-width: 1199px) {
+          font-size: 1.25rem;
+          min-width: 200px;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 1rem;
+          min-width: auto;
+        }
+
+        &:nth-child(2) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  &_trade_entry {
+    &_box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.25rem;
+      padding: 1.5rem 1.25rem;
+      border-radius: 1.25rem;
+      cursor: pointer;
+
+      @media (max-width: 1199px) {
+        padding: 10px 10px;
+      }
+
+      &_headtext {
+        @media (max-width: 767px) {
+          flex-wrap: wrap;
+        }
+      }
+
+      h5 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        @media (max-width: 1279px) {
+          font-size: 1rem;
+        }
+
+        @media (max-width: 1199px) {
+          font-size: 0.875rem;
+          margin-left: 10px;
+        }
+
+        @media (max-width: 767px) {
+          padding: 4px 0;
+        }
+
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+
+      .solidArrow {
+        transform: rotate(0deg);
+
+        @media screen and (max-width: 1199px) {
+          svg {
+            width: 20px;
+          }
+        }
+
+        &.infoIcon {
+          svg {
+            width: 37px;
+            height: 37px;
+
+            circle {
+              fill: var.$redlightclr;
+            }
+          }
+        }
+      }
+
+      .endArrow {
+        transform: rotate(180deg);
+        margin-left: 1.5rem;
+
+        @media screen and (max-width: 1199px) {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

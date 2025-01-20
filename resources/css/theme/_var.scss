@@ -1,0 +1,105 @@
+@use "fonts.scss";
+
+$basefont: "Gilroy", sans-serif;
+
+// color code
+$themeclr: #011132;
+$baseclr: #00adef;
+$baseclrhover: #0099d1;
+$white: #ffffff;
+$black: #000000;
+$textclr: #c5c5d5;
+$greytext: #9c9a9f;
+$green: #32cd33;
+$greenbtnhover: #2bb72b;
+$greenlighttext: #7aff67;
+$greenlightbg: #7af870;
+$red: #ff0302;
+$redlighttext: #d54d3f;
+$redlightclr: #ff696a;
+$redbghover: #e65f60;
+$yellow: #fea500;
+$yellowlighttext: #feff14;
+$borderclr: #666666;
+$cardbg: rgba(159, 159, 159, 0.1);
+$inputbgclr: rgba(255, 255, 255, 0.3);
+$blackbg: #160125;
+$bghover: #084872;
+$clr000607: #000607;
+$clr031940: #031940;
+$clr064197: #064197;
+$clr042053: #042053;
+$clr001331: #001331;
+$clr032251: #032251;
+$clr04498C: #04498c;
+$clr191C23: #191c23;
+$lightwhiteclr: rgba(255, 255, 255, 0.5);
+$bluelightclr: rgba(0, 173, 239, 0.15);
+$lightgreyclr: #c5c5c5;
+$clr1E222D: #1e222d;
+$clr2A2E39: #2a2e39;
+$clr283f67: #283f67;
+$clrd9d9d9: #d9d9d9;
+$clrc5c5d5: #c5c5d5;
+$clre9e9e9: #e9e9e9;
+$clre6e6e6: #e6e6e6;
+$clr00b9ff: #00b9ff;
+
+// $gradient: linear-gradient(121.07deg, #B482ED -3.32%, #000000 95.56%);
+$radialgradientblue: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 185, 255, 0.2) 21.5%,
+    rgba(0, 83, 153, 0.2) 100%
+  ),
+  linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 47.5%,
+    rgba(255, 255, 255, 0) 100%
+  );
+$gradientGreen: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  ),
+  linear-gradient(
+    270.33deg,
+    rgba(50, 205, 51, 0.4) 0%,
+    rgba(50, 205, 51, 0.15) 45.5%,
+    rgba(50, 205, 51, 0.4) 98%
+  );
+$gradientRed: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  ),
+  linear-gradient(
+    270.33deg,
+    rgba(255, 105, 106, 0.4) 0%,
+    rgba(255, 105, 106, 0.2) 50%,
+    rgba(255, 105, 106, 0.4) 100%
+  );
+$gradientYellow: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  ),
+  linear-gradient(
+    270.33deg,
+    rgba(254, 165, 0, 0.4) 0%,
+    rgba(254, 165, 0, 0.2) 50%,
+    rgba(254, 165, 0, 0.4) 100%
+  );
+$gradientcardblue: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 185, 255, 0.5) 21.5%,
+    rgba(0, 83, 153, 0.5) 100%
+  ),
+  linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 47.5%,
+    rgba(255, 255, 255, 0) 100%
+  );
+$gradientblackbg: linear-gradient(to right, #2a2e39, #1e222d);
+$gradientbluebg: linear-gradient(to right, #283f67, #031940);

@@ -1,0 +1,37 @@
+@use "../theme/var";
+
+.account_details {
+  .account_card_list {
+    ul {
+      li {
+        justify-content: flex-start;
+
+        @media screen and (max-width: 767px) {
+          justify-content: space-between;
+        }
+
+        span {
+          padding-right: 15px;
+
+          @media screen and (min-width: 768px) {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.add_plusicon {
+  button {
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+
+      path {
+        fill: var.$baseclr;
+      }
+    }
+  }
+}

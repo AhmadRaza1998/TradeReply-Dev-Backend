@@ -1,0 +1,11 @@
+@use "../theme/var";
+
+.brokers_table {
+  .tableless .common_table tbody td a {
+    color: var.$white;
+
+    &:hover {
+      color: var.$baseclr;
+    }
+  }
+}

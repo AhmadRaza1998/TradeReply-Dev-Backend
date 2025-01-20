@@ -1,0 +1,104 @@
+@use "../theme/var";
+
+.faq_card {
+  .common_heading {
+    h2 {
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+      }
+    }
+  }
+  &_accordion {
+    margin-top: 60px;
+
+    @media screen and (max-width: 991px) {
+      margin-top: 15px;
+    }
+
+    .accordion {
+      .accordion-item {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid var.$borderclr;
+        border-radius: 0;
+
+        .accordion-header {
+          border: 0;
+          .accordion-button {
+            background-color: transparent;
+            border: none;
+            color: var.$white;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 36px;
+            letter-spacing: -1px;
+            text-align: left;
+            padding: 40px 0;
+            border-radius: 0;
+            box-shadow: none;
+
+            @media screen and (max-width: 991px) {
+              padding: 20px 0;
+            }
+
+            @media screen and (max-width: 767px) {
+              font-size: 16px;
+              line-height: 24px;
+            }
+
+            &::after {
+              background-image: url("/images/icons/plus.svg");
+              background-size: 32px;
+              width: 32px;
+              height: 32px;
+              background-repeat: no-repeat;
+
+              @media screen and (max-width: 991px) {
+                background-size: 20px;
+                width: 20px;
+                height: 20px;
+              }
+            }
+
+            &[aria-expanded="true"] {
+              transform: none;
+              &::after {
+                background-image: url("/images/icons/minus.svg");
+                height: 4px;
+
+                @media screen and (max-width: 767px) {
+                  height: 2px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .accordion-collapse {
+        .accordion-body {
+          padding: 0;
+          color: var.$white;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 36px;
+          letter-spacing: -1px;
+          text-align: left;
+          padding-bottom: 30px;
+          border: 0;
+
+          @media screen and (max-width: 991px) {
+            padding-bottom: 20px;
+            font-size: 18px;
+            line-height: 30px;
+          }
+
+          @media screen and (max-width: 767px) {
+            font-size: 15px;
+            line-height: 23px;
+          }
+        }
+      }
+    }
+  }
+}

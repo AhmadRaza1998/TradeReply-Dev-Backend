@@ -1,0 +1,29 @@
+@use "../theme/var";
+
+.our_testimonial_sec {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/spotlight.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 0;
+
+    @media (max-width: 991px) {
+      height: 55%;
+    }
+
+    @media (max-width: 767px) {
+      height: 60%;
+      display: none;
+    }
+  }
+}

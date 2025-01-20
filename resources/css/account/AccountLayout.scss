@@ -1,0 +1,438 @@
+@use "../theme/var";
+
+.Account_layout {
+  &_main {
+    display: flex;
+  }
+
+  // &_leftaside {
+
+  // }
+
+  &_rightaside {
+    width: calc(100% - 355px);
+    padding: 2.813rem 1.875rem;
+    color: var.$white;
+    position: relative;
+
+    @media (min-width: 992px) {
+      .mb-lg-4 {
+        margin-bottom: 1.875rem !important;
+      }
+    }
+
+    @media (max-width: 1199px) {
+      width: 100%;
+      padding: 2.813rem 1rem;
+    }
+  }
+}
+
+.sidebar_heading {
+  margin-bottom: 26px;
+
+  @media screen and (max-width: 1199px) {
+    padding-left: 45px;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+
+    @media (max-width: 1199px) {
+      font-size: 1.688rem;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.common_blackcard {
+  background-color: var.$clr191C23;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid var.$clr04498C;
+  width: 100%;
+
+  &_innerheader {
+    background-color: var.$clr031940;
+    padding: 0.625rem 1.25rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+
+    @media (max-width: 991px) {
+      padding: 0.625rem 0.625rem;
+    }
+
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+
+    p {
+      color: var.$lightgreyclr;
+      margin-top: 5px;
+
+      @media (max-width: 991px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+
+    &_content {
+      padding-right: 30px;
+
+      @media (max-width: 991px) {
+        padding-right: 15px;
+
+        h6 {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        padding-right: 5px;
+      }
+    }
+
+    &_icon {
+      button {
+        background-color: transparent;
+        border: 0;
+        color: var.$baseclr;
+        font-size: 1.25rem;
+        padding: 0;
+        font-weight: 600;
+        transition: all ease-in-out 0.3s;
+
+        @media (max-width: 991px) {
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+
+        .me-2 {
+          margin-right: 10px !important;
+        }
+
+        .ms-2 {
+          margin-left: 10px !important;
+        }
+
+        svg {
+          margin-left: 10px;
+          transition: all ease-in-out 0.3s;
+          width: 16px;
+
+          @media (max-width: 991px) {
+            width: 14px;
+          }
+
+          @media (max-width: 767px) {
+            width: 10px;
+            margin-left: 0px;
+          }
+
+          path {
+            fill: var.$baseclr;
+          }
+        }
+
+        &:hover {
+          color: var.$yellow;
+
+          svg {
+            margin-left: 12px;
+
+            @media (max-width: 991px) {
+              margin-left: 10px;
+            }
+
+            path {
+              fill: var.$yellow;
+            }
+          }
+        }
+      }
+    }
+
+    &_tradeacct {
+      min-width: 200px;
+      width: 200px;
+
+      h6 {
+        background-color: var.$clr04498C;
+        padding: 8px 15px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: var.$white;
+        font-size: 1.25rem;
+        line-height: normal;
+
+        @media (max-width: 991px) {
+          font-size: 16px;
+        }
+      }
+
+      p {
+        background-color: var.$white;
+        padding: 8px 15px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: var.$black;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
+        line-height: normal;
+
+        @media (max-width: 991px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &_innerbody {
+    padding: 1.25rem 0.625rem;
+  }
+}
+
+.account_card_table {
+  .common_blackcard_innerbody {
+    padding: 0;
+  }
+}
+
+.account_card {
+  &.pullcontent {
+    @media (max-width: 991px) {
+      .common_blackcard_innerheader_icon {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.account {
+  &_card {
+    &_list {
+      ul {
+        li {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1.25rem;
+          color: var.$white;
+          font-size: 1.125rem;
+          font-weight: 600;
+
+          @media (max-width: 991px) {
+            font-size: 15px;
+            margin-bottom: 1rem;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          span {
+            color: var.$lightgreyclr;
+          }
+        }
+      }
+
+      p {
+        color: var.$lightgreyclr;
+      }
+    }
+
+    &_redeem {
+      .form-control {
+        width: calc(100% - 136px);
+        margin-right: 10px;
+      }
+
+      .btn-style {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 26px;
+        min-width: 150px;
+        padding: 8px 15px;
+        min-height: 56px;
+
+        @media (max-width: 991px) {
+          font-size: 14px;
+          line-height: 24px;
+          min-width: 130px;
+          padding: 8px 15px;
+          min-height: 52px;
+        }
+      }
+    }
+
+    &_checkup {
+      &_verify {
+        width: calc(100% - 150px);
+        padding-right: 30px;
+
+        @media (max-width: 991px) {
+          width: calc(100% - 100px);
+          padding-right: 0;
+        }
+      }
+
+      &_chart {
+        width: 150px;
+        text-align: center;
+
+        @media (max-width: 991px) {
+          width: 100px;
+
+          .CircularProgressbar_text h6 {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &_subscription {
+      &_list {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          width: 25%;
+
+          @media (max-width: 767px) {
+            width: 50%;
+            padding: 5px 0;
+
+            &:nth-child(2n) {
+              text-align: right;
+            }
+          }
+
+          p {
+            color: var.$lightgreyclr;
+            margin-top: 0.425rem;
+
+            @media (max-width: 991px) {
+              font-size: 14px;
+              line-height: 20px;
+            }
+
+            @media (max-width: 767px) {
+              margin-top: 0;
+            }
+          }
+
+          h6 {
+            @media (max-width: 991px) {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    &_table {
+      .simple_table_imgIcon {
+        min-width: 20px;
+      }
+      .tableless {
+        border: 0;
+
+        &::before {
+          display: none;
+        }
+
+        .common_table {
+          tr {
+            th,
+            td {
+              border: 0;
+            }
+
+            td {
+              border-bottom: 1px solid var.$borderclr;
+              color: var.$white;
+              font-weight: 600 !important;
+            }
+          }
+
+          thead {
+            tr {
+              border-radius: 15px;
+
+              th {
+                background-color: var.$clr031940;
+                padding: 10px 15px;
+                font-size: 1rem;
+
+                &:first-child {
+                  border-top-left-radius: 15px;
+                  border-bottom-left-radius: 15px;
+                }
+
+                &:last-child {
+                  border-top-right-radius: 15px;
+                  border-bottom-right-radius: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .add_phone_number,
+    .add_number,
+    .blue_text_btn {
+      background-color: transparent;
+      border: 0;
+      color: var.$baseclr;
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 24.5px;
+      letter-spacing: -0.10000000149011612px;
+      transition: all ease-in-out 0.3s;
+      padding: 0;
+
+      @media (max-width: 991px) {
+        font-size: 1rem;
+      }
+
+      &:hover {
+        color: var.$yellow;
+      }
+    }
+
+    .add_number,
+    .blue_text_btn {
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+
+        path {
+          fill: var.$baseclr;
+        }
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: var.$yellow;
+          }
+        }
+      }
+    }
+  }
+}

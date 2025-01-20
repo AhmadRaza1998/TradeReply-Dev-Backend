@@ -1,0 +1,131 @@
+@use "../theme/var";
+
+.status_chart {
+  &_lastday {
+    background-color: var.$black;
+    padding: 0.625rem 1.875rem;
+    border-radius: 15px;
+    margin-bottom: 1.25rem;
+
+    h5 {
+      color: var.$white;
+      text-align: left;
+    }
+
+    &_task {
+      display: flex;
+      align-items: center;
+
+      h5 {
+        display: flex;
+        align-items: center;
+        padding-left: 1.875rem;
+
+        @media screen and (max-width: 767px) {
+          padding-left: 10px;
+        }
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        span {
+          width: 24px;
+          height: 24px;
+          border-radius: 5px;
+          margin-right: 10px;
+
+          @media screen and (max-width: 767px) {
+            width: 18px;
+            height: 18px;
+          }
+        }
+
+        .redbg {
+          background-color: var.$red;
+        }
+
+        .greenbg {
+          background-color: var.$green;
+        }
+
+        .yellowbg {
+          background-color: var.$yellow;
+        }
+      }
+    }
+  }
+
+  &_box {
+    background-color: var.$black;
+    padding: 50px 1rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 767px) {
+      padding: 30px 10px;
+    }
+
+    &_graph {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &-month-title {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 30px;
+        margin-bottom: 1rem;
+      }
+
+      &_day {
+        display: inline-block;
+        width: 15px;
+        height: 130px;
+        margin: 0 2px;
+        background-color: var.$green;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        @media screen and (max-width: 991px) {
+          width: 9px;
+        }
+
+        @media screen and (max-width: 767px) {
+          height: 50px;
+          margin: 0 1px;
+          width: 3.5px;
+        }
+
+        &_big {
+          height: 150px;
+
+          @media screen and (max-width: 767px) {
+            height: 60px;
+          }
+        }
+
+        &_regular {
+          height: 60px;
+
+          @media screen and (max-width: 767px) {
+            height: 25px;
+          }
+        }
+
+        &_incident {
+          background-color: var.$yellow;
+          height: 90px;
+
+          @media screen and (max-width: 767px) {
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+}
