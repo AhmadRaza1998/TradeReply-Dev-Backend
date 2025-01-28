@@ -237,6 +237,19 @@ To test APIs or webhooks during development, you can use tools like:
 
 ---
 
+## 📄 File Naming Conventions
+
+To ensure consistency and optimize for SEO, all file names must adhere to the following guidelines:
+
+- **Lowercase Only**: All file names should be written in lowercase letters.
+- **Prefix with "tradereply"**: Every file name must start with tradereply for branding and organization.
+- **Use Dashes**: Use dashes (-) to separate words in file names. Avoid underscores (_) unless explicitly required by a system.
+- **Descriptive Naming**: File names should be clear and descriptive to reflect their purpose.
+- Example:
+- Correct: tradereply-dashboard-icon.png
+- Incorrect: TradeReply_dashboard_icon.png
+- By following these conventions, we ensure a consistent, professional file structure across the project.
+
 ## ☁️ AWS Resource Naming
 
 To ensure clarity and consistency across AWS resources, follow these naming conventions:
