@@ -7,11 +7,11 @@ import useNavigate from "@/Hooks/useNavigate";
 import HomeLayout from "@/Layouts/HomeLayout";
 import "../../../css/Home/Features.scss";
 
-const stockimg = "/images/stockimg.png";
-const logimg = "/images/logimg.png";
-const whyimg = "/images/TradeReply-70-percent_Features.png";
-const buildimg = "/images/buildimg.png";
-const dashboardimg = "/images/dashboardimg.png";
+const stockimg = "/images/tradereply-stock-analysis.png";
+const logimg = "/images/tradereply-log-trades.png";
+const whyimg = "/images/tradereply-70-percent-rule.png";
+const buildimg = "/images/tradereply-trading-strategies.png";
+const dashboardimg = "/images/tradereply-portfolio-analysis.png";
 
 const Features = () => {
   const navigate = useNavigate();

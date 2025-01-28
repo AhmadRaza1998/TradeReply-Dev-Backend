@@ -151,7 +151,7 @@ const HowitWorks = () => {
                 <Tab.Pane eventKey="1">
                   <div className="howit_content d-md-flex align-items-center">
                     <figure className="">
-                      <img src="/images/checkIcon.svg" alt="" />
+                      <img src="/images/tradereply-improve-trading.svg" alt="" />
                     </figure>
                     <div className="howit_content_text">
                       <h3>Join Now</h3>
@@ -170,7 +170,7 @@ const HowitWorks = () => {
                 <Tab.Pane eventKey="2">
                   <div className="howit_content d-md-flex align-items-center">
                     <figure className="">
-                      <img src="/images/checkIcon.svg" alt="" />
+                      <img src="/images/tradereply-improve-trading.svg" alt="" />
                     </figure>
                     <div className="howit_content_text">
                       <h3>Import Trading Data</h3>
@@ -189,7 +189,7 @@ const HowitWorks = () => {
                 <Tab.Pane eventKey="3">
                   <div className="howit_content d-md-flex align-items-center">
                     <figure className="">
-                      <img src="/images/checkIcon.svg" alt="" />
+                      <img src="/images/tradereply-improve-trading.svg" alt="" />
                     </figure>
                     <div className="howit_content_text">
                       <h3>Customize Your Dashboard</h3>
@@ -208,7 +208,7 @@ const HowitWorks = () => {
                 <Tab.Pane eventKey="4">
                   <div className="howit_content d-md-flex align-items-center">
                     <figure className="">
-                      <img src="/images/checkIcon.svg" alt="" />
+                      <img src="/images/tradereply-improve-trading.svg" alt="" />
                     </figure>
                     <div className="howit_content_text">
                       <h3>Analyze Your Performance</h3>
@@ -227,7 +227,7 @@ const HowitWorks = () => {
                 <Tab.Pane eventKey="5">
                   <div className="howit_content d-md-flex align-items-center">
                     <figure className="">
-                      <img src="/images/checkIcon.svg" alt="" />
+                      <img src="/images/tradereply-improve-trading.svg" alt="" />
                     </figure>
                     <div className="howit_content_text">
                       <h3>Optimize Strategies</h3>
@@ -246,7 +246,7 @@ const HowitWorks = () => {
                 <Tab.Pane eventKey="6">
                   <div className="howit_content d-md-flex align-items-center">
                     <figure className="">
-                      <img src="/images/checkIcon.svg" alt="" />
+                      <img src="/images/tradereply-improve-trading.svg" alt="" />
                     </figure>
                     <div className="howit_content_text">
                       <h3>Stay Informed</h3>

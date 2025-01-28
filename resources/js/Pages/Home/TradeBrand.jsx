@@ -4,15 +4,15 @@ import { CheckGradientIcon } from "@/Components/img/svgIcons/SvgIcon";
 import "../../../css/Home/TradeBrand.scss";
 import HomeLayout from "@/Layouts/HomeLayout";
 
-const imglogo = "/images/Official_logo1.svg";
-const imglogo1 = "/images/Official_logo2.svg";
-const mologo1 = "/images/Monotone_logo1.svg";
-const mologo2 = "/images/Monotone_logo2.svg";
-const mologo3 = "/images/Monotone_logo3.svg";
-const mologo4 = "/images/Monotone_logo4.svg";
-const ourlogo1 = "/images/Our_Icon1.svg";
-const ourlogo2 = "/images/Our_Icon2.svg";
-const ourlogo3 = "/images/Our_Icon3.svg";
+const imglogo = "/images/tradereply-trading-dashboard-logo.svg";
+const imglogo1 = "/images/tradereply-trading-performance-logo.svg";
+const mologo1 = "/images/tradereply-black-logo.svg";
+const mologo2 = "/images/tradereply-white-black-logo.svg";
+const mologo3 = "/images/tradereply-white-cyan-logo.svg";
+const mologo4 = "/images/tradereply-cyan-black-logo.svg";
+const ourlogo1 = "/images/tradereply-square-logo-white.svg";
+const ourlogo2 = "/images/tradereply-square-logo-black.svg";
+const ourlogo3 = "/images/tradereply-square-logo-white-cyan.svg";
 
 const TradeBrand = () => {
   const trademarkdata = [

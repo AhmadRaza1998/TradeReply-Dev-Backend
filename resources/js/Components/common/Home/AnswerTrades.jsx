@@ -45,7 +45,7 @@ const AnswerTrades = () => {
             <h3>#TradeReply</h3>
           </div>
           <div className="answer_trades_logoicon text-center">
-            <img src="/images/Logo-Icon.svg" alt="icon" />
+            <img src="/images/tradereply-trading-tools.svg" alt="icon" />
           </div>
           <div className="answer_trades_contentbox">
             <Row>

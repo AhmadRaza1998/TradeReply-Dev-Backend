@@ -14,7 +14,7 @@ const ReferReward = () => {
               <div className="d-flex align-items-center justify-content-center">
                 <img
                   className="refer_reward_logo"
-                  src="/images/Logo-Icon.svg"
+                  src="/images/tradereply-trading-tools.svg"
                   alt="logoicon"
                 />
 

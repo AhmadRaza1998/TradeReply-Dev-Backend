@@ -29,7 +29,7 @@ const FeaturedResources = () => {
             </Col>
             <Col lg={6} sm={12} className="text-center mt-5 mt-lg-0">
               <div className="featured_resources_img">
-                <img src="/images/grap.png" alt="img" />
+                <img src="/images/tradereply-for-crypto-traders.png" alt="img" />
               </div>
             </Col>
           </Row>

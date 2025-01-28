@@ -21,7 +21,7 @@ const BannerSec = () => {
         <div>
           <img
             className="d-none d-md-block"
-            src="/images/overlayImg.png"
+            src="/images/tradereply-optimize-trades.png"
             alt="sss"
             height={555}
           />

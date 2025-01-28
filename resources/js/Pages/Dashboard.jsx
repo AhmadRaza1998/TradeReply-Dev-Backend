@@ -52,7 +52,7 @@ export default function Dashboard() {
                       </span>
                       <h4 className="my-3">{item?.text}</h4>
                       <figure>
-                        <img src="/images/grap.png" alt="chart" />
+                        <img src="/images/tradereply-for-crypto-traders.png" alt="chart" />
                       </figure>
                     </div>
                   )}
@@ -60,7 +60,7 @@ export default function Dashboard() {
                     <div className="overview_box_fillbox">
                       <h4 className="mb-4">{item?.text}</h4>
                       <figure>
-                        <img src="/images/evaluation_img.png" alt="evalicon" />
+                        <img src="/images/tradereply-trade-metrics.png" alt="evalicon" />
                       </figure>
                     </div>
                   )}

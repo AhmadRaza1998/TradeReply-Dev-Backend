@@ -21,13 +21,13 @@ const LearningResources = () => {
                 href="/education"
                 className="learning_resources_content_card"
               >
-                <img src="images/education_img.jpg" alt="img" />
+                <img src="images/tradereply-blog-trading-analytics.jpg" alt="img" />
                 <h3>Education</h3>
               </NavLink>
             </div>
             <div className="learning_resources_content_col">
               <NavLink href="/blog" className="learning_resources_content_card">
-                <img src="/images/education_img2.jpg" alt="img" />
+                <img src="/tradereply-education-stocks-crypto.jpg" alt="img" />
                 <h3>Blog</h3>
               </NavLink>
             </div>
