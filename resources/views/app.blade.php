@@ -8,10 +8,8 @@
 		<!-- Prevent Indexing During Development -->
 		<meta name="robots" content="noindex, nofollow">
 
-		<!-- Fallback Metadata (React SSR will override per page) -->
+		<!-- Global Fallback Metadata (React SSR Will Override Per Page) -->
 		<meta name="description" content="Optimize your trades with TradeReply.com. Access powerful trading strategies, real-time analytics, and tools for crypto and stock market success." />
-
-		<!-- Open Graph Fallback (For Social Media Sharing) -->
 		<meta property="og:site_name" content="TradeReply" />
 		<meta property="og:title" content="TradeReply: Optimize Your Trading Strategies & Analytics" />
 		<meta property="og:description" content="Access powerful trading strategies, real-time analytics, and tools for crypto and stock market success with TradeReply.com." />
@@ -21,13 +19,14 @@
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:locale" content="en_US" />
-
-		<!-- Twitter Card (For Twitter Previews) -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="TradeReply: Optimize Your Trading Strategies & Analytics" />
 		<meta name="twitter:description" content="Access powerful trading strategies, real-time analytics, and tools for crypto and stock market success with TradeReply.com." />
 		<meta name="twitter:image" content="{{ asset('images/tradereply-trading-analytics-og.jpg') }}" />
 		<meta name="twitter:site" content="@JoinTradeReply" />
+
+        <!-- Allow Inertia to Override Metadata Dynamically -->
+		@inertiaHead
 
 		<!-- Favicons (Same Across All Pages) -->
         <link rel="icon" href="{{ asset('tradereply-favicon.ico') }}" type="image/x-icon">
@@ -41,7 +40,6 @@
         @routes
         @viteReactRefresh
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
-        @inertiaHead
     </head>
     <body class="font-sans antialiased">
         @inertia

@@ -21,7 +21,12 @@ const HomeLayout = ({ children }) => {
   return (
     <Fragment>
       <Header />
-      {children}
+      
+      {/* Wrap main content in <main> for SEO & accessibility */}
+      <main className="main-content">
+        {children}
+      </main>
+
       <Footer />
     </Fragment>
   );
