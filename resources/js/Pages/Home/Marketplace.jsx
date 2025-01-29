@@ -77,15 +77,15 @@ const Marketplace = () => {
     <HomeLayout>
       <div className="marketplace py-100">
         <Container>
-          <section className="market_inner">
-            <div className="market_heading text-center">
+          <section className="marketplace_inner">
+            <div className="marketplace_heading text-center">
               <h1>TradeReply Marketplace</h1>
             </div>
-            <div className="market_shopcart d-flex align-items-center justify-content-between justify-content-md-center">
-              <div className="market_shopcart_selectshop">
+            <div className="marketplace_shopcart d-flex align-items-center justify-content-between justify-content-md-center">
+              <div className="marketplace_shopcart_selectshop">
                 <CustomSelect options={options} placeholder="Shop" />
               </div>
-              <div className="market_shopcart_btn order-md-last">
+              <div className="marketplace_shopcart_btn order-md-last">
                 <button type="button" className="d-flex align-items-center">
                   <CartIcon />
                   Cart (0)
@@ -95,16 +95,16 @@ const Marketplace = () => {
                 <CommonSearch placeholder="Search for terms" icon={true} />
               </div>
             </div>
-            <div className="market_inner_heading">
+            <div className="marketplace_inner_heading">
               <h4>TradeReply Courses</h4>
               <CustomBreadcrumb href="#" linkname="Shop" pagename="Courses" />
             </div>
           </section>
 
-          <section className="market_products">
-            <div className="market_products_row">
-              <div className="market_products_filtercol">
-                <div className="market_products_filter">
+          <section className="marketplace_products">
+            <div className="marketplace_products_row">
+              <div className="marketplace_products_filtercol">
+                <div className="marketplace_products_filter">
                   <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                       <Accordion.Header>asset type</Accordion.Header>
@@ -144,16 +144,16 @@ const Marketplace = () => {
                   </Accordion>
                 </div>
               </div>
-              <section className="market_products_productcol">
+              <section className="marketplace_products_productcol">
                 <div className="d-flex align-items-md-center justify-content-between">
-                  <div className="market_products_count">
+                  <div className="marketplace_products_count">
                     <p className="blue_text">1-20 of 20</p>
                   </div>
                   <div className="d-lg-flex justify-content-end">
-                    <div className="market_products_pagination ms-lg-5 mb-3 mb-lg-0 order-lg-last">
+                    <div className="marketplace_products_pagination ms-lg-5 mb-3 mb-lg-0 order-lg-last">
                       <CustomPagination />
                     </div>
-                    <div className="market_products_sort d-flex align-items-center ">
+                    <div className="marketplace_products_sort d-flex align-items-center ">
                       <h5>Sort by:</h5>
                       <CustomSelect
                         options={shortoptions}
@@ -162,17 +162,17 @@ const Marketplace = () => {
                     </div>
                   </div>
                 </div>
-                <div className="market_products_product">
-                  <div className="market_products_product_row">
+                <div className="marketplace_products_product">
+                  <div className="marketplace_products_product_row">
                     <Row className="gx-xl-5">
                       {marketproducts?.map((item, index) => {
                         return (
                           <Col key={index} xl={4} md={6} xs={6}>
-                            <div className="market_products_card">
-                              <div className="market_products_card_img">
+                            <div className="marketplace_products_card">
+                              <div className="marketplace_products_card_img">
                                 <img src={item.img} alt="img" />
                               </div>
-                              <div className="market_products_card_content">
+                              <div className="marketplace_products_card_content">
                                 <h4 className="my-2 py-1">{item.title}</h4>
                                 <h4>{item.price}</h4>
                               </div>
