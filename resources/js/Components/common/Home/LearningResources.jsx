@@ -27,7 +27,7 @@ const LearningResources = () => {
             </div>
             <div className="learning_resources_content_col">
               <NavLink href="/blog" className="learning_resources_content_card">
-                <img src="image/tradereply-education-stocks-crypto.jpg" alt="img" />
+                <img src="images/tradereply-education-stocks-crypto.jpg" alt="img" />
                 <h3>Blog</h3>
               </NavLink>
             </div>
