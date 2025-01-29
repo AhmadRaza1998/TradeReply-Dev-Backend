@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title inertia>{{ config('app.name', 'TradeReply: Optimize Your Trading Strategies & Analytics') }}</title>
+		
+		<!-- Prevent Indexing During Development -->
+		<meta name="robots" content="noindex, nofollow">
 
 		<!-- Fallback Metadata (React SSR will override per page) -->
 		<meta name="description" content="Optimize your trades with TradeReply.com. Access powerful trading strategies, real-time analytics, and tools for crypto and stock market success." />
