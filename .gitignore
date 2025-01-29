@@ -7,18 +7,51 @@
 /storage/*.key
 /storage/pail
 /vendor
+
+# Environment Variables
 .env
 .env.backup
 .env.production
+
+# Laravel Cache & Debug Files
+/storage/debugbar
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*.log
+
+# Laravel Compiled Assets
+/public/mix-manifest.json
+/public/css/*.css.map
+/public/js/*.js.map
+
+# Laravel Telescope (if used)
+/storage/telescope
+
+# PHPUnit
 .phpactor.json
 .phpunit.result.cache
+
+# Homestead / Vagrant
 Homestead.json
 Homestead.yaml
+
+# Composer auth files
 auth.json
+
+# npm & Yarn Logs
 npm-debug.log
 yarn-error.log
+
+# JetBrains / VS Code / Fleet / Nova / Zed
 /.fleet
 /.idea
 /.nova
 /.vscode
 /.zed
+
+# MacOS system files
+.DS_Store
+
+# Linux system files
+*.swp

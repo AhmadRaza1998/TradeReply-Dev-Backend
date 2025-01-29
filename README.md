@@ -17,7 +17,7 @@ Ensure dev styling matches the deprecated frontend-only site, https://static.tra
 ---
 
 ## 🚀 Tech Stack
-- **Quick Overview**: Server-Side Rendering (SSR) with Inertia.js + React + MySQL + TailwindCSS + AWS
+- **Quick Overview**: SPA, SSR with Inertia.js + React + Laravel + MySQL + TailwindCSS + AWS
 - **Frontend**: React with JSX and SCSS for building interactive user interfaces, styled with TailwindCSS and Sass for maintainable, modular CSS. Vite is used for hot module replacement (HMR) and fast asset bundling.
 - **Backend**: Laravel for robust API development and server-side logic, integrated with the `laravel-vite-plugin` for seamless asset management.
 - **Database**: MySQL for relational data management.
