@@ -30,8 +30,8 @@ const sitemapbox = [
         to: "/trading-calculator",
       },
       {
-        text: "Market",
-        to: "/market",
+        text: "Marketplace",
+        to: "/marketplace",
       },
       {
         text: "Features",

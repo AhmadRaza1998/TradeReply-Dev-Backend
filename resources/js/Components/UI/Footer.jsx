@@ -18,11 +18,11 @@ const Footer = () => {
                     </Link>
                   </div>
                   <p>
-                    TradeReply is a revolutionary anafytics suite that enables
-                    crypts and stock traders to input historical trading data
-                    and harness powerful visual l(Pls, graphs, and metrics for
-                    optimizing and building trade strategies with real-time
-                    insights.
+                    TradeReply is an advanced analytics suite designed
+					for crypto and stock traders to input historical trading
+					data and leverage powerful visuals, graphs, and metrics to
+					optimize and develop effective trade strategies with real-time
+					insights.
                   </p>
                 </div>
               </Col>
@@ -113,7 +113,7 @@ const Footer = () => {
         </div>
         <div className="site_footer_copyright">
           <Container>
-            <p>Copyright © 2024 TradeReply. All Rights Reserved.</p>
+            <p>Copyright © 2025 TradeReply. All Rights Reserved.</p>
           </Container>
         </div>
       </div>

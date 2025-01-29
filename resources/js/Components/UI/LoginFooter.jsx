@@ -11,7 +11,7 @@ const LoginFooter = () => {
           <Link href="/cookies">Cookies</Link>
           <Link href="#">Cookie Settings</Link>
         </div>
-        <p>Copyright © 2024 TradeReply. All Rights Reserved.</p>
+        <p>Copyright © 2025 TradeReply. All Rights Reserved.</p>
       </div>
     </>
   );

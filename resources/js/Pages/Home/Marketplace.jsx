@@ -5,9 +5,9 @@ import CustomSelect from "@/Components/UI/Select";
 import CustomBreadcrumb from "@/Components/UI/CustomBreadcrumb";
 import CustomPagination from "@/Components/UI/CustomPagination";
 import HomeLayout from "@/Layouts/HomeLayout";
-import "../../../css/Home/Market.scss";
+import "../../../css/Home/Marketplace.scss";
 
-const Market = () => {
+const Marketplace = () => {
   const options = [
     {
       value: "Shop",
@@ -75,7 +75,7 @@ const Market = () => {
 
   return (
     <HomeLayout>
-      <div className="market py-100">
+      <div className="marketplace py-100">
         <Container>
           <section className="market_inner">
             <div className="market_heading text-center">
@@ -192,4 +192,4 @@ const Market = () => {
   );
 };
 
-export default Market;
+export default Marketplace;

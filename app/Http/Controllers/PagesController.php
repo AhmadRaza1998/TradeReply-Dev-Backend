@@ -37,8 +37,8 @@ class PagesController extends Controller
         ]);
     }
 
-    public function market(){
-        return Inertia::render('Home/Market', [
+    public function marketplace(){
+        return Inertia::render('Home/Marketplace', [
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,

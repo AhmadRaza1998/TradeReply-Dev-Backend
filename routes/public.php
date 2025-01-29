@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(PagesController::class)->group(function () {
     Route::get('/', 'home')->name('page.home');
-    Route::get('/market', 'market')->name('page.market');
+    Route::get('/marketplace', 'marketplace')->name('page.marketplace');
     Route::get('/pricing','pricing')->name('page.pricing');
     Route::get('/features','features')->name('page.featuress');
     Route::get('/terms','terms')->name('page.terms');

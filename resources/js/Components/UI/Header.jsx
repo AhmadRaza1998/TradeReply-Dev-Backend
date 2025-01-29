@@ -65,10 +65,10 @@ const Header = () => {
             <div className="navMenu d-xl-flex">
               <NavLink
                 onClick={handleNavClick}
-                href="/market"
+                href="/marketplace"
                 className="nav-link"
               >
-                Market
+                Marketplace
               </NavLink>
 
               <div
