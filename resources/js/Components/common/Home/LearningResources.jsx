@@ -11,7 +11,7 @@ const LearningResources = () => {
           <div className="learning_resources_heading">
             <CommonHeading heading="Learning Resources" />
             <p>
-              Explore our Comprehensive industry definitions and guides to
+              Explore our comprehensive industry definitions and guides to
               enhance your trading knowledge.
             </p>
           </div>

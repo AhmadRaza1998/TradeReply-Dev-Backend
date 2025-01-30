@@ -94,7 +94,7 @@ const Pricing = () => {
                 <div className="pricing_banner_content">
                   <h1>Join Free, Upgrade Anytime</h1>
                   <p>
-                    Enjoy Powerful Insights with our free analytics suite.
+                    Enjoy powerful insights with our free analytics suite.
                     Upgrade anytime for additional premium features.
                   </p>
                 </div>

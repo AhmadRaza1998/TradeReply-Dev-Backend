@@ -10,12 +10,18 @@ const OurMission = () => {
           <div className="our_mission_content">
             <CommonHeading heading="Our Mission" centered />
             <p>
-              At TradeReply, our mission is to empower traders with personalized
-              performance analytics to optimize their strategies. Our platform
-              focuses on real-time KPIs, customizable dashboards, and
-              interactive tools, prioritizing trader performance over market
-              analyses. Join TradeReply to enhance your trading journey with
-              tailored insights and cutting-edge analytics.
+			  Success in trading isn’t random—it’s analyzed, refined, and earned.
+			  At TradeReply, we empower you with deep trading analytics and real-time
+			  insights to expose patterns, optimize strategies, and take control of
+			  your performance.
+			</p>
+			<p>
+			  With customizable dashboards, hundreds of data connections, and powerful
+			  KPIs, you have everything you need to uncover what’s working, fix what’s
+			  not, and trade with confidence.
+			</p>
+			<p>
+			  Every trade tells a story. The best traders listen—TradeReply helps you respond.
             </p>
           </div>
         </Container>

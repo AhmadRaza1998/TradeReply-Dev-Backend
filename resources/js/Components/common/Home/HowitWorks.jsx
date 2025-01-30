@@ -236,7 +236,7 @@ const HowitWorks = () => {
                         strategies. Test different scenarios, monitor results,
                         and continuously improve your approach.
                       </p>
-                      <NavLink href="/pricing" className="green-btn">
+                      <NavLink href="/pricing" className="btn-style green-btn">
                         {" "}
                         Optimize Trading
                       </NavLink>
@@ -255,7 +255,7 @@ const HowitWorks = () => {
                         educational resources to enhance your trading knowledge
                         and skills.
                       </p>
-                      <NavLink href="/pricing" className="green-btn">
+                      <NavLink href="/pricing" className="btn-style green-btn">
                         {" "}
                         Optimize Trading
                       </NavLink>

@@ -21,13 +21,13 @@ const AnswerTrades = () => {
       icon: <FilterIcon />,
       title: "Advanced Filtering",
       content:
-        "Customize data views with multi- dimensional filtering options.",
+        "Customize data views with multi-dimensional filtering options.",
     },
     {
       icon: <DashboardIcon />,
       title: "Flexible Dashboards",
       content:
-        "Multilple accounts & dashboards tailored to individual strategies and goals.",
+        "Multiple accounts & dashboards tailored to individual strategies and goals.",
     },
     {
       icon: <DynamicIcon />,
