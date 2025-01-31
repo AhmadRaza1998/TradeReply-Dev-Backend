@@ -65,7 +65,7 @@ const sitemapbox = [
       },
       {
         text: "Refer A Friend",
-        to: "/refer-friend",
+        to: "/refer-a-friend",
       },
       {
         text: "Partner Program",

@@ -250,7 +250,7 @@ const EducationDetail = () => {
                   />
                 </div>
                 <div className="education_detail_postimg">
-                  <img src={"/images/singlepostimg.jpg"} alt={props?.title ? `${props.title} - Educational resource` : "Educational content preview"} />
+                  <img src={"/images/singlepostimg.jpg"} alt="Dynamic article title : Educational content preview" />
                 </div>
 
                 <div className="education_detail_text">

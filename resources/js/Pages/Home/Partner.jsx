@@ -77,7 +77,7 @@ const PartnerProgram = () => {
           </div>
           <div className="inner_content">
             <p>
-              <Link className="btn-style green-btn" href="/refer-a-friend">
+              <Link className="btn-style green-btn" href="#">
                 Join & Earn Today
               </Link>
             </p>
