@@ -145,7 +145,7 @@ const Security = () => {
                       <td>
                         <img
                           className="simple_table_imgIcon"
-                          src={"/images/icons/blue_global.svg"}
+                          src={"/images/icons/tradereply-blue-global.svg"}
                           alt=""
                         />
                       </td>

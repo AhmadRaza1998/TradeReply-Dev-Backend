@@ -47,7 +47,7 @@
             }
 
             &::after {
-              background-image: url("/images/icons/plus.svg");
+              background-image: url("/images/icons/tradereply-plus.svg");
               background-size: 32px;
               width: 32px;
               height: 32px;
@@ -63,7 +63,7 @@
             &[aria-expanded="true"] {
               transform: none;
               &::after {
-                background-image: url("/images/icons/minus.svg");
+                background-image: url("/images/icons/tradereply-minus.svg");
                 height: 4px;
 
                 @media screen and (max-width: 767px) {

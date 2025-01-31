@@ -128,13 +128,13 @@
             color: var.$white;
 
             &::after {
-              background-image: url("/images/icons/minus.svg");
+              background-image: url("/images/icons/tradereply-minus.svg");
               transform: none;
             }
           }
 
           &::after {
-            background-image: url("/images/icons/plus.svg");
+            background-image: url("/images/icons/tradereply-plus.svg");
             transform: none;
             background-position: center;
           }

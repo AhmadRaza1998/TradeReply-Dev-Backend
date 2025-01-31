@@ -6,7 +6,7 @@ import HomeLayout from "@/Layouts/HomeLayout";
 
 const sitemapbox = [
   {
-    icon: "/images/icons/roket.svg",
+    icon: "/images/icons/tradereply-rocket.svg",
     title: "Main Pages",
     content: [
       {
@@ -44,7 +44,7 @@ const sitemapbox = [
     ],
   },
   {
-    icon: "/images/icons/user_account.svg",
+    icon: "/images/icons/tradereply-user-account.svg",
     title: "User Account",
     content: [
       {
@@ -78,7 +78,7 @@ const sitemapbox = [
     ],
   },
   {
-    icon: "/images/icons/user_account.svg",
+    icon: "/images/icons/tradereply-user-account.svg",
     title: "Extra Resources",
     content: [
       {
