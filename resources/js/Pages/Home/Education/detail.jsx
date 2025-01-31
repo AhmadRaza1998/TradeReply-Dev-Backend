@@ -206,7 +206,7 @@ const EducationDetail = () => {
                             >
                               <div className="d-flex education_detail_sidebar_profit_inner_detail">
                                 <div className="education_detail_sidebar_profit_img">
-                                  <img src={item.img} alt="" />
+                                  <img src={item.img} alt={item?.title ? `${item.title} - Trading metric visualization` : "Trading metric chart"} />
                                 </div>
                                 <div className="education_detail_sidebar_profit_text">
                                   <h6>{item.title}</h6>
@@ -250,7 +250,7 @@ const EducationDetail = () => {
                   />
                 </div>
                 <div className="education_detail_postimg">
-                  <img src={"/images/singlepostimg.jpg"} alt="" />
+                  <img src={"/images/singlepostimg.jpg"} alt={props?.title ? `${props.title} - Educational resource` : "Educational content preview"} />
                 </div>
 
                 <div className="education_detail_text">

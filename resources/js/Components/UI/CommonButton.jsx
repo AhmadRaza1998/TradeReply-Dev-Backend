@@ -11,7 +11,7 @@ const CommonButton = (props) => {
     >
       {props.onlyIcon && <span className="onlyIcon">{props.onlyIcon}</span>}
       {props.title}
-      {props.btnIcon && <img src={props.btnIcon} alt="icon" className="" />}
+      {props.btnIcon && <img src={props.btnIcon} alt={props?.title ? `${props.title} icon` : "Button icon"} className="" />}
     </button>
   );
 };

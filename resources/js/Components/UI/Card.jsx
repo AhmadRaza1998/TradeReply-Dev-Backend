@@ -20,7 +20,7 @@ export default function Card({
             <img
               className="card-img-top"
               src={item?.feature_image || placeHolderImg}
-              alt="Card image cap"
+              alt={get(item, "title", "Featured content preview") + " - Featured content preview"}
               width={100}
               height={300}
             />

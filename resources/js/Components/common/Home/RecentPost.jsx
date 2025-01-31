@@ -8,7 +8,7 @@ const RecentPost = ({ img, title, text, coinname, className, time, href }) => {
     <>
       <Link href={href} className={`recent_post ${className}`}>
         <div className="recent_post_img">
-          <img src={img || placeHolderImg} alt="img" />
+          <img src={img || placeHolderImg} alt={title ? `Recent blog post: ${title}` : "TradeReply blog article thumbnail"} />
         </div>
         <div className="recent_post_content">
           <small>{coinname}</small>

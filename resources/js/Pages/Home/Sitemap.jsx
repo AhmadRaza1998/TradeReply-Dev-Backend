@@ -127,7 +127,7 @@ const Sitemap = () => {
                   <Col key={index} sm={4} xs={12}>
                     <div className="sitemap_content_box">
                       <div className="sitemap_content_box_icon">
-                        <img src={item?.icon} alt="icon" />
+                        <img src={item?.icon} alt={item?.title ? `${item.title} section - TradeReply sitemap` : "TradeReply sitemap icon"} />
                       </div>
                       <h4>{item?.title}</h4>
                       <ul>

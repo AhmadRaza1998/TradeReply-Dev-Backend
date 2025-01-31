@@ -170,7 +170,7 @@ const Marketplace = () => {
                           <Col key={index} xl={4} md={6} xs={6}>
                             <div className="marketplace_products_card">
                               <div className="marketplace_products_card_img">
-                                <img src={item.img} alt="img" />
+                                <img src={item.img} alt={item.title ? `${item.title} - TradeReply marketplace product` : "TradeReply marketplace item"} />
                               </div>
                               <div className="marketplace_products_card_content">
                                 <h4 className="my-2 py-1">{item.title}</h4>

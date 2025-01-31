@@ -60,7 +60,7 @@ const Features = () => {
                 Stock Trade Analy<span className="blue_text">sis</span>
               </h1>
               <div className="mt-5 pt-xl-4">
-                <img src={stockimg} alt="stockimg" />
+                <img src={stockimg} alt="TradeReply: Stock and Crypto Trading Analysis" />
               </div>
             </section>
             <section className="features_yourTrade py-100">
@@ -76,7 +76,7 @@ const Features = () => {
                 </h4>
               </div>
               <div className="mt-5 pt-xl-4">
-                <img src={logimg} alt="logimg" />
+                <img src={logimg} alt="Seamlessly log and sync trades for accurate records and real-time performance tracking across all accounts" />
               </div>
             </section>
             <section className="text-center features_whyUse py-100">
@@ -90,7 +90,7 @@ const Features = () => {
                 </h4>
               </div>
               <div className="mt-5 pt-xl-4">
-                <img src={whyimg} alt="whyimg" />
+                <img src={whyimg} alt="70% of traders succeed with data analytics, while 70% of those without it fail—TradeReply empowers smarter trading decisions" />
               </div>
             </section>
             <section className="features_testimonial">
@@ -113,7 +113,7 @@ const Features = () => {
                 </h4>
               </div>
               <div className="mt-5 pt-xl-4">
-                <img src={buildimg} alt="logimg" />
+                <img src={buildimg} alt="Build and optimize trading strategies with advanced tools and historical data for data-driven success" />
               </div>
             </section>
             <section className="text-center features_Personalized py-100">
@@ -125,7 +125,7 @@ const Features = () => {
                 </h4>
               </div>
               <div className="mt-5 pt-xl-4">
-                <img src={dashboardimg} alt="dashboardimg" />
+                <img src={dashboardimg} alt="Customize trading dashboards with KPI widgets, filters for metrics, strategies, trades, tickers, and accounts" />
               </div>
             </section>
             <section className="features_transformsec">

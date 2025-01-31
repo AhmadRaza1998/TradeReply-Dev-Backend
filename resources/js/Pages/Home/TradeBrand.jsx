@@ -71,7 +71,7 @@ const TradeBrand = () => {
               <Row className="px-lg-5">
                 <Col xs={6} className="mt-4">
                   <div className="trade_brand_content_logo">
-                    <img src={imglogo} alt="" />
+                    <img src={imglogo} alt="TradeReply main logo - primary brand emblem" />
                     <h5 className="mt-4">
                       This is the main TradeReply logo. It should be used like
                       this whenever possible.
@@ -80,7 +80,7 @@ const TradeBrand = () => {
                 </Col>
                 <Col xs={6} className="mt-4">
                   <div className="trade_brand_content_logo">
-                    <img src={imglogo1} alt="" />
+                    <img src={imglogo1} alt="TradeReply alternative logo - optimized for white backgrounds" />
                     <h5 className="mt-4">
                       This version is an alternative if you are using the logo
                       on a white background.
@@ -103,14 +103,14 @@ const TradeBrand = () => {
               <Row>
                 <Col xs={6} className="mt-4">
                   <div className="trade_brand_content_logo text-center">
-                    <img src={mologo1} alt="" />
-                    <img className="mt-4" src={mologo2} alt="" />
+                    <img src={mologo1} alt="TradeReply black logo - monochrome version" />
+                    <img className="mt-4" src={mologo2} alt="TradeReply white and black logo - high contrast version" />
                   </div>
                 </Col>
                 <Col xs={6} className="mt-4">
                   <div className="trade_brand_content_logo text-center">
-                    <img src={mologo3} alt="" />
-                    <img className="mt-4" src={mologo4} alt="" />
+                    <img src={mologo3} alt="TradeReply white and cyan logo - alternative monochrome version" />
+                    <img className="mt-4" src={mologo4} alt="TradeReply cyan and black logo - high contrast variation" />
                   </div>
                 </Col>
               </Row>
@@ -127,17 +127,17 @@ const TradeBrand = () => {
               <Row>
                 <Col xs={4}>
                   <div className="trade_brand_content_logo text-center">
-                    <img src={ourlogo1} alt="" />
+                    <img src={ourlogo1} alt="TradeReply square icon logo - white version" />
                   </div>
                 </Col>
                 <Col xs={4}>
                   <div className="trade_brand_content_logo text-center">
-                    <img src={ourlogo2} alt="" />
+                    <img src={ourlogo2} alt="TradeReply square icon logo - black version" />
                   </div>
                 </Col>
                 <Col xs={4}>
                   <div className="trade_brand_content_logo text-center">
-                    <img src={ourlogo3} alt="" />
+                    <img src={ourlogo3} alt="TradeReply square icon logo - white and cyan version" />
                   </div>
                 </Col>
               </Row>

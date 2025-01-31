@@ -152,7 +152,7 @@ const TradesTabs = ({ className }) => {
                       Unlock Insights with Advanced Trading KPIs and Metrics
                     </h3>
                     <figure className="mt-4 pt-xl-3">
-                      <img src="/images/tabs_img.jpg" alt="" />
+                      <img src="/images/tabs_img.jpg" alt="Gain deep insights with advanced KPIs and trade performance metrics" />
                     </figure>
                   </div>
                 </Tab.Pane>
@@ -160,7 +160,7 @@ const TradesTabs = ({ className }) => {
                   <div className="trades_tabs_content text-center">
                     <h3>Visualize Trade Performance with Interactive Graphs</h3>
                     <figure className="mt-4 pt-xl-3">
-                      <img src="/images/tabs_img.jpg" alt="" />
+                      <img src="/images/tabs_img.jpg" alt="Analyze and improve trade performance using interactive graphs" />
                     </figure>
                   </div>
                 </Tab.Pane>
@@ -168,7 +168,7 @@ const TradesTabs = ({ className }) => {
                   <div className="trades_tabs_content text-center">
                     <h3>Track Your Trading Statistics Using Dynamic Charts</h3>
                     <figure className="mt-4 pt-xl-3">
-                      <img src="/images/tabs_img.jpg" alt="" />
+                      <img src="/images/tabs_img.jpg" alt="Monitor trading statistics with real-time, dynamic charts" />
                     </figure>
                   </div>
                 </Tab.Pane>
@@ -178,7 +178,7 @@ const TradesTabs = ({ className }) => {
                       Harness Real-Time Data for Informed Trading Decisions
                     </h3>
                     <figure className="mt-4 pt-xl-3">
-                      <img src="/images/tabs_img.jpg" alt="" />
+                      <img src="/images/tabs_img.jpg" alt="Use live data for informed trading decisions and strategy adjustments" />
                     </figure>
                   </div>
                 </Tab.Pane>
@@ -188,7 +188,7 @@ const TradesTabs = ({ className }) => {
                       Customize Dashboard for Personalized Trading Insights
                     </h3>
                     <figure className="mt-4 pt-xl-3">
-                      <img src="/images/tabs_img.jpg" alt="" />
+                      <img src="/images/tabs_img.jpg" alt="Personalize your dashboard with custom trading insights and analytics" />
                     </figure>
                   </div>
                 </Tab.Pane>
@@ -198,7 +198,7 @@ const TradesTabs = ({ className }) => {
                       Master Industry Definitions to Enhance Trading Knowlege
                     </h3>
                     <figure className="mt-4 pt-xl-3">
-                      <img src="/images/tabs_img.jpg" alt="" />
+                      <img src="/images/tabs_img.jpg" alt="Enhance trading knowledge with key industry definitions and concepts" />
                     </figure>
                   </div>
                 </Tab.Pane>

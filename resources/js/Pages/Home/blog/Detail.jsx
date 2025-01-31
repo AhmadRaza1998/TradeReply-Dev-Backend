@@ -46,7 +46,7 @@ const BlogDetail = (props) => {
             </div>
 
             <div className="blog_detail_postimg">
-              <img src={"/images/singlepostimg.jpg"} alt="" />
+              <img src={"/images/singlepostimg.jpg"} alt={props?.title || "Blog article image"} />
             </div>
 
             <div className="blog_detail_text">

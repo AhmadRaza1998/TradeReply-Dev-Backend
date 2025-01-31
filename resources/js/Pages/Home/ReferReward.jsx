@@ -15,7 +15,7 @@ const ReferReward = () => {
                 <img
                   className="refer_reward_logo"
                   src="/images/tradereply-trading-tools.svg"
-                  alt="logoicon"
+                  alt="Invite friends to TradeReply and earn rewards for referrals"
                 />
 
                 <h1>Refer & Reward</h1>

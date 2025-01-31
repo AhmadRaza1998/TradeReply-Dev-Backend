@@ -22,7 +22,7 @@ const BannerSec = () => {
           <img
             className="d-none d-md-block"
             src="/images/tradereply-optimize-trades.png"
-            alt="sss"
+            alt="TradeReply analytics suite: Optimize crypto and stock trading strategies with real-time insights and data-driven metrics."
             height={555}
           />
         </div>

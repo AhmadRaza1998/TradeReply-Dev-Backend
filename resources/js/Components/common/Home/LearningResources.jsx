@@ -21,13 +21,13 @@ const LearningResources = () => {
                 href="/education"
                 className="learning_resources_content_card"
               >
-                <img src="images/tradereply-blog-trading-analytics.jpg" alt="img" />
+                <img src="images/tradereply-education-stocks-crypto.jpg" alt="Expand your trading knowledge with in-depth definitions, concepts, and resources in the TradeReply Education Center" />
                 <h3>Education</h3>
               </NavLink>
             </div>
             <div className="learning_resources_content_col">
               <NavLink href="/blog" className="learning_resources_content_card">
-                <img src="images/tradereply-education-stocks-crypto.jpg" alt="img" />
+                <img src="images/tradereply-blog-trading-analytics.jpg" alt="Explore the latest trading insights, strategies, and market trends on the TradeReply blog" />
                 <h3>Blog</h3>
               </NavLink>
             </div>

@@ -20,7 +20,7 @@ const StatusChart = () => {
         </div>
 
         <div className="status_chart_box">
-          {/* <img src={chatimg} alt="img" /> */}
+          {/* <img src={chatimg} alt="TradeReply status of systems" /> */}
           <div className="status_chart_box_graph">
             <div className="status_chart_box_graph-month">
               <div className="status_chart_box_graph-month-title">

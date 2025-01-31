@@ -144,7 +144,7 @@ export default function Create() {
             <img
               id="selectedImage"
               src={preview ?? placeHolderImg}
-              alt="example placeholder"
+              alt=""
               style={{
                 width: "300px",
               }}

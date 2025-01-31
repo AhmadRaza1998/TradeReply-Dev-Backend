@@ -52,7 +52,7 @@ export default function Dashboard() {
                       </span>
                       <h4 className="my-3">{item?.text}</h4>
                       <figure>
-                        <img src="/images/tradereply-for-crypto-traders.png" alt="chart" />
+                        <img src="/images/tradereply-for-crypto-traders.png" alt="TradeReply visual analytics – Gain insights with interactive charts and trading metrics" />
                       </figure>
                     </div>
                   )}
@@ -60,7 +60,7 @@ export default function Dashboard() {
                     <div className="overview_box_fillbox">
                       <h4 className="mb-4">{item?.text}</h4>
                       <figure>
-                        <img src="/images/tradereply-trade-metrics.png" alt="evalicon" />
+                        <img src="/images/tradereply-trade-metrics.png" alt="TradeReply trading tools – Analyze, track, and optimize your trades with real-time insights" />
                       </figure>
                     </div>
                   )}

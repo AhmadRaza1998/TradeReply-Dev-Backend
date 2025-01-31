@@ -29,7 +29,7 @@ const FeaturedResources = () => {
             </Col>
             <Col lg={6} sm={12} className="text-center mt-5 mt-lg-0">
               <div className="featured_resources_img">
-                <img src="/images/tradereply-for-crypto-traders.png" alt="img" />
+                <img src="/images/tradereply-for-crypto-traders.png" alt="TradeReply analytics suite: Optimize your trading with real-time insights" />
               </div>
             </Col>
           </Row>

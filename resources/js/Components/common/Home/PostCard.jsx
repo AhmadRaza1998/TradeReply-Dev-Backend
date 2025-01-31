@@ -7,7 +7,7 @@ const PostCard = ({ img, title, text, className, redirectHref }) => {
         <div>
           <div className="blog_postcard_img">
             <div className="blog_postcard_img_overlay">
-              <img src={img} alt="img" />
+              <img src={img} alt={title?.trim() ? `Featured blog post: ${title}` : "TradeReply blog article thumbnail"} />
             </div>
           </div>
           <div className="blog_postcard_content">

@@ -14,25 +14,25 @@ import "../../../css/account/Security.scss";
 const Security = () => {
   const recentdata = [
     {
-      site: "Tradehoc.com Website",
+      site: "Tradereply.com Website",
       sitepc: "Windows PC",
       date: "Jun 16, 2024 2:06 PM",
       city: "Miami , United States",
     },
     {
-      site: "Tradehoc.com Website",
+      site: "Tradereply.com Website",
       sitepc: "Android",
       date: "May 5, 2024 2:06 PM",
       city: "Florida , United States",
     },
     {
-      site: "Tradehoc.com Website",
+      site: "Tradereply.com Website",
       sitepc: "Windows PC",
       date: "Jun 16, 2024 2:06 PM",
       city: "Miami , United States",
     },
     {
-      site: "Tradehoc.com Website",
+      site: "Tradereply.com Website",
       sitepc: "Windows PC",
       date: "Jun 16, 2024 2:06 PM",
       city: "Miami , United States",

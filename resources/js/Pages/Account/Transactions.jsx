@@ -10,19 +10,19 @@ const TransactionHistory = () => {
   const paymentdata = [
     {
       date: "Apr 30, 2024",
-      name: "TradeHoc Essential Subscription - 1 month",
+      name: "TradeReply Essential Subscription - 1 month",
       price: "14.99",
       id: "US991234784",
     },
     {
       date: "Apr 30, 2024",
-      name: "TradeHoc Essential Subscription - 1 month",
+      name: "TradeReply Essential Subscription - 1 month",
       price: "14.99",
       id: "US991234784",
     },
     {
       date: "Apr 30, 2024",
-      name: "TradeHoc Essential Subscription - 1 month",
+      name: "TradeReply Essential Subscription - 1 month",
       price: "14.99",
       id: "US991234784",
     },

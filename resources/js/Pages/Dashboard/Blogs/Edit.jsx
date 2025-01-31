@@ -148,7 +148,7 @@ export default function Edit({ blog }) {
             <img
               id="selectedImage"
               src={preview || get(blog, "feature_image") || placeHolderImg}
-              alt="example placeholder"
+              alt=""
               style={{
                 width: "300px",
               }}
