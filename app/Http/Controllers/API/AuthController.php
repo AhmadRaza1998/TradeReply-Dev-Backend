@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AuthRequest;
+use App\Http\Services\AuthServices;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,10 +14,12 @@ class AuthController extends Controller
 {
     //
 
+    // protected $authServices;
     protected $user;
 
-    public function __construct()
-    {
+    public function __construct(AuthServices $authServices)
+    {   
+        // $this->authServices = $authServices;
         $this->user = new User();
     }
 
@@ -28,16 +32,21 @@ class AuthController extends Controller
 //            'password' => 'required|min:6|confirmed',
 //        ]);
 
+        // return $this->authServices->register($request->validated());
+        
         $user = $this->user::create([
-            'name' => $request->name,
+            'name' => $request->email,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+        dd($user);
+        // Auth::login($user);
+        // $request->session()->regenerate();
 
-        Auth::login($user);
-        $request->session()->regenerate();
-
-        return response()->json($user);
+        return response()->json([
+            'user' => $user,
+            'message' => 'User created successfully'
+        ]);
     }
 
     public function login(Request $request)
