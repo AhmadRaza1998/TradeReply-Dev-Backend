@@ -33,7 +33,7 @@ class AuthController extends Controller
 
         $user = $this->user::create([
             'email' => $data['email'],
-            'password' => Hash::make($data->['password']),
+            'password' => Hash::make($data['password']),
         ]);
 
         // Auth::login($user);
