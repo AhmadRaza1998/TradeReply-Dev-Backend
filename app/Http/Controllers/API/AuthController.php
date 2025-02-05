@@ -18,7 +18,7 @@ class AuthController extends Controller
     protected $user;
 
     public function __construct(AuthServices $authServices)
-    {   
+    {
         // $this->authServices = $authServices;
         $this->user = new User();
     }
@@ -33,13 +33,13 @@ class AuthController extends Controller
 //        ]);
 
         // return $this->authServices->register($request->validated());
-        
+
         $user = $this->user::create([
             'name' => $request->email,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        dd($user);
+
         // Auth::login($user);
         // $request->session()->regenerate();
 
