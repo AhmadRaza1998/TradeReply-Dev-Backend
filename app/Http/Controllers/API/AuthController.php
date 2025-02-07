@@ -67,19 +67,24 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        if (!Auth::attempt($credentials)) {
+        // Find user manually
+        $user = User::where('email', $request->email)->first();
+
+        // Check if user exists and password is correct
+        if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
                 'success' => false,
                 'message' => 'Invalid credentials'
             ], 401);
         }
 
-        // Regenerate session to prevent session fixation attacks
-        $request->session()->regenerate();
 
+        // Generate API token for mobile/backend apps
+        $token = $user->createToken('API Token')->plainTextToken;
         return response()->json([
             'success' => true,
-            'message' => 'Login successful',
+            'message' => 'API login successful',
+            'token' => $token,
             'user' => Auth::user()
         ]);
     }
