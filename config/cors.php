@@ -16,20 +16,12 @@ return [
     */
 
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
-
+    'paths' => ['api/*', 'sanctum/csrf-cookie'], // Include Sanctum CSRF
     'allowed_methods' => ['*'],
-
-    'allowed_origins' =>  ['http://localhost:3000'],
-
-    'allowed_origins_patterns' => [],
-
+    'allowed_origins' => ['http://localhost:3000'], // Set your frontend URL
     'allowed_headers' => ['*'],
-
     'exposed_headers' => [],
-
     'max_age' => 0,
-
-    'supports_credentials' => true,
+    'supports_credentials' => true, // Important for cookie-based authentication
 
 ];
