@@ -53,11 +53,20 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return response()->json(Auth::user());
+            $session = $request->session()->regenerate();
+            $user = Auth::user();
+            $token = $user->createToken('TradeReply')->accessToken;
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Login successful',
+                    'auth_token' => $token, 
+                    'user' => $user
+                ]);
         }
-
-        return response()->json(['message' => 'Invalid credentials'], 401);
+        return response()->json([
+            'success' => false,
+            'message' => 'Invalid credentials'
+        ], 401);
     }
 
     public function logout(Request $request)
