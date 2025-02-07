@@ -67,31 +67,6 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        if (!Auth::attempt($credentials)) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Invalid credentials'
-            ], 401);
-        }
-
-        // Generate API token for mobile/backend apps
-        $token = Auth::user()->createToken('API Token')->plainTextToken;
-        return response()->json([
-            'success' => true,
-            'message' => 'API login successful',
-            'token' => $token,
-            'user' => Auth::user()
-        ]);
-    }
-
-    public function apiLogin(Request $request)
-    {
-
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required'
-        ]);
-
         // Find user manually
         $user = User::where('email', $request->email)->first();
 
@@ -104,30 +79,21 @@ class AuthController extends Controller
         }
 
 
-        // Generate API token for mobile/backend apps
         $token = $user->createToken('API Token')->plainTextToken;
         return response()->json([
             'success' => true,
             'message' => 'API login successful',
             'token' => $token,
-            'user' => Auth::user()
+            'user' => $user
         ]);
     }
 
-
     public function logout(Request $request)
-    {
-        Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-        return response()->json(['message' => 'Logged out']);
-    }
-
-    public function apiLogout(Request $request)
     {
         $request->user()->tokens()->delete();
         return response()->json(['message' => 'API tokens revoked']);
     }
+
     public function forget_password(Request $request)
     {
         $request->validate([
