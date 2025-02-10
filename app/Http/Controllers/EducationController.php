@@ -19,8 +19,10 @@ class EducationController extends Controller
     {
         //
         $educations = Education::orderBy('created_at', 'desc')->paginate(10);
-        return Inertia::render('Dashboard/Educations/Index', [
-            'educations' => $educations
+        return response()->json([
+            'success' => true,
+            'message' => 'education data',
+            'data' => $educations,
         ]);
     }
 
