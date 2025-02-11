@@ -7,10 +7,11 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-
+use APP\Traits\CsvImporterTrait;
 class Education extends Model
 {
-    protected $fillable = ['title', 'content', 'slug', 'feature_image', 'tags'];
+    use CsvImporterTrait;
+    protected $fillable = ['title', 'content', 'slug', 'feature_image', 'tags','primary_category_id','is_featured'];
 
     protected static function boot()
     {
@@ -22,6 +23,27 @@ class Education extends Model
                 // Delete the image from storage/app/public
                 if (Storage::disk('public')->exists($education->feature_image)) {
                     Storage::disk('public')->delete($education->feature_image);
+                }
+            }
+        });
+
+        static::creating(function ($education) {
+            if ($education->title) {
+                $education->slug = self::generateUniqueSlug($education->title);
+            }
+            if (request()->hasFile('feature_image')) {
+                $education->feature_image = self::uploadFeatureImage(request()->file('feature_image'));
+            }
+        });
+
+        static::updating(function ($education) {
+            if (request()->hasFile('feature_image')) {
+                $oldImage = $education->getOriginal('feature_image');
+
+                $education->feature_image = self::uploadFeatureImage(request()->file('feature_image'));
+
+                if ($oldImage && Storage::disk('public')->exists($oldImage)) {
+                    Storage::disk('public')->delete($oldImage);
                 }
             }
         });
@@ -47,6 +69,10 @@ class Education extends Model
         return $slug;
     }
 
+    public static function uploadFeatureImage($file)
+    {
+        return $file->store('uploads/feature_images', 'public');
+    }
     public function setTagsAttribute($value)
     {
         $this->attributes['tags'] = is_array($value) ? implode(',', $value) : $value;
@@ -88,4 +114,34 @@ class Education extends Model
     {
         return $this->belongsToMany(Category::class, 'blog_category');
     }
+
+
+    /**
+     * Import Education records from CSV
+     *
+     * @param string $filePath
+     * @param array $mapping (CSV header to DB column mapping)
+     * @return array
+     * @throws Exception
+     */
+    public static function importFromCsv(string $file, array $mapping = [])
+    {
+        try {
+            $educationInstance = new self();
+
+            $records = $educationInstance->importCsv($file, $educationInstance->getFillable(), $mapping);
+
+            $importedRecords = [];
+
+            foreach ($records as $educationData) {
+                $education = self::create((array)$educationData);
+                $importedRecords[] = $education;
+            }
+
+            return $importedRecords;
+        } catch (Exception $e) {
+            throw new Exception("Error importing education records: " . $e->getMessage());
+        }
+    }
+
 }

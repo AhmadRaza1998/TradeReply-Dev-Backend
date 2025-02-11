@@ -18,42 +18,58 @@ class EducationController extends Controller
     public function index()
     {
         //
-        $educations = Education::orderBy('created_at', 'desc')->paginate(10);
+        $educations = Education::with(['primaryCategory:id,title'])
+            ->orderBy('title', 'asc')
+            ->paginate(25);
+
+        $educations->getCollection()->transform(function ($education) {
+            $education->summary = mb_strimwidth($education->summary, 0, 250, '...');
+            return $education;
+        });
+
         return response()->json([
             'success' => true,
             'message' => 'education data',
             'data' => $educations,
         ]);
+
+
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        $categories = Category::all();
-        return Inertia::render('Dashboard/Educations/Create',[
-            'categories'=>$categories
+        $request->validate([
+            'file' => 'required|file|mimes:csv,txt'
+        ]);
+
+        $file = $request->file('file');
+
+        // Read the file content directly without storing
+        $educationRecords = Education::importFromCsv($file);
+
+        return response()->json([
+            'message' => 'Education Records Imported Successfully',
+            'imported_records' => $educationRecords
         ]);
     }
+
+
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(EducationRequest $request)
     {
-        $slug = Education::generateUniqueSlug($request->input('title'));
+        $education = Education::create([$request->all()]);
 
-        Education::create([
-            'title' => $request->input('title'),
-            'content' => $request->input('content'),
-            'slug' => $slug,
-            'is_featured' => $request->has('is_feature') ? 1 : 0,
-            'feature_image' => $request->file('feature_image'),
-            'tags' => $request->input('tags'),
+        return response()->json([
+            'success' => true,
+            'message' => 'education data',
+            'data' => $education,
         ]);
-
-        return redirect()->route('blog-manager.index')->with('success', 'Blog added successfully.');
     }
 
     /**
@@ -83,17 +99,20 @@ class EducationController extends Controller
      */
     public function update(EducationRequest $request, Education $education)
     {
+        $data = [
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
+            'is_featured' => $request->has('is_featured') ? 1 : 0,
+            'tags' => $request->input('tags'),
+        ];
 
-        // Update the post details
-        $education->title = $request->input('title');
-        $education->content = $request->input('content');
-        $education->tags = $request->input('tags');
-        $education->is_featured = $request->has('is_feature') ? 1 : 0;
-        if ($request->hasFile('feature_image')) {
-            $education->feature_image = $request->file('feature_image');
-        }
-        $education->save();
-        return redirect()->route('blog-manager.index')->with('success', 'Blog updated successfully.');
+        $education->update($data);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Education data updated successfully',
+            'data' => $education,
+        ]);
     }
 
     /**
@@ -127,4 +146,41 @@ class EducationController extends Controller
             'canRegister' => Route::has('register'),
         ]);
     }
+    /**
+     * Filters education records based on request parameters.
+     *
+     * @param \Illuminate\Http\Request $request The request containing filter parameters.
+     * @return \Illuminate\Http\JsonResponse The filtered education records.
+     */
+    public function filter(Request $request)
+    {
+        $filterType = $request->input('filter');
+        $filterValue = $request->input('value');
+
+        if ($filterType == 'tags' && !empty($filterValue)) {
+            $educations = Education::with(['primaryCategory:id,title'])
+                ->where('tags', $filterValue)
+                ->orderBy('title', 'asc')
+                ->paginate(25);
+
+            $educations->getCollection()->transform(function ($education) {
+                $education->summary = mb_strimwidth($education->summary, 0, 250, '...');
+                return $education;
+            });
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Education data retrieved successfully',
+                'data' => $educations,
+            ]);
+        }
+
+        return response()->json([
+            'success' => false,
+            'message' => 'Invalid filter type or missing value.',
+            'data' => [],
+        ], 400);
+    }
+
+
 }
